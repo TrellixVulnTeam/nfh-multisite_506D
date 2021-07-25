@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'Muli';
+    src: url('Muli-Regular.eot');
+    src: url('Muli-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Muli-Regular.woff2') format('woff2'),
+        url('Muli-Regular.woff') format('woff'),
+        url('Muli-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Intelo';
+    src: url('Intelo-SemiBold.eot');
+    src: url('Intelo-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('Intelo-SemiBold.woff2') format('woff2'),
+        url('Intelo-SemiBold.woff') format('woff'),
+        url('Intelo-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Intelo';
+    src: url('Intelo-Bold.eot');
+    src: url('Intelo-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Intelo-Bold.woff2') format('woff2'),
+        url('Intelo-Bold.woff') format('woff'),
+        url('Intelo-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Muli';
+    src: url('Muli-SemiBold.eot');
+    src: url('Muli-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('Muli-SemiBold.woff2') format('woff2'),
+        url('Muli-SemiBold.woff') format('woff'),
+        url('Muli-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+

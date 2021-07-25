@@ -1,0 +1,125 @@
+// ----------------
+//   Globals SCSS
+// ----------------
+
+
+// ---------
+// Variables
+
+
+    // Font Faces
+    $font1:    'muli', Helvetica, sans-serif;
+    $font2:    'muli-bold', Helvetica, sans-serif;
+    $heading1:  'intelo-bold', Helvetica, sans-serif;
+    $heading2:  'intelo', Helvetica, sans-serif;
+    // Colours
+    $teal:        #20bfb4;  // 13A298 // 20bfb4
+    $purple:      #5d4ac6;   // 5d4ac6 // 5c4cb3
+    $limegreen:   #bfd62f;
+    $black:       #000000;
+    $white:       #fefefe;
+    $pagebg:      #f8f8f9;
+    $tilebg:      #F7F7FC;
+    $footerbg:    #212122;
+    $sidebarbg:   #f7f7fc;
+    $borderlight: #e6e6fd;
+    $buttonblack: #000;
+
+
+// -----------------------------------
+// Responsive Mixin
+
+
+      //    @include mq('md') { }
+      //    @include mq('md', 'max')
+      $breakpoints: (
+          "xs":           0px,
+          "sm":           576px,
+          "md":           768px,
+          "lg":           992px,
+          "xg":           1200px,
+          "xv":           1350px,
+          "xl":           1440px,
+          "xxl":          1550px,
+          "phone":        400px,
+          "tablet":       768px,
+          "desktop":      1024px,
+          "desktop-wide": 1440px
+      );
+
+
+      @mixin mq($width, $type: min) {
+          @if map_has_key($breakpoints, $width) {
+              $width: map_get($breakpoints, $width);
+              @if $type == max {
+                  $width: $width - 1px;
+              }
+              @media only screen and (#{$type}-width: $width) {
+                  @content;
+              }
+          }
+      }
+
+
+
+
+// ---------------
+// All Other Mixins
+
+      // use these in CSS with:  @include [mixin-name-goes-here]
+      @mixin reset-list { // back to normal for List-type
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      @mixin transitions {
+        -webkit-transition: all 250ms ease-out;
+        -moz-transition:  all 250ms ease-out;
+        -o-transition:  all 250ms ease-out;
+        transition:  all 250ms ease-out;
+      }
+
+
+      @mixin square($size, $radius: 0) { // reset square
+        // usage:   @include square(100px, $radius: 4px);
+
+        width: $size;
+        height: $size;
+
+        @if $radius != 0 {
+          border-radius: $radius;
+        }
+      }
+
+
+
+      @mixin push--auto {
+          margin: {
+              left: auto;
+              right: auto;
+          }
+      }
+
+
+
+      @mixin pseudo($display: block, $pos: absolute, $content: ''){
+          content: $content;
+          display: $display;
+          position: $pos;
+      }
+
+
+
+      @mixin input-placeholder {
+          /* Usage:
+               @include input-placeholder {
+                  color: $grey;
+               }
+          */
+          &.placeholder { @content; }
+          &:-moz-placeholder { @content; }
+          &::-moz-placeholder { @content; }
+          &:-ms-input-placeholder { @content; }
+          &::-webkit-input-placeholder { @content; }
+      }

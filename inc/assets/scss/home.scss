@@ -1,0 +1,398 @@
+
+// ------
+// Slider
+
+// NOTE: Some responsive code is at the bottom of this page , for Home CSS .
+
+
+
+#section--home-slider {
+
+  &.slick-initialized {
+
+    .slick-slide {
+      display: flex !important;
+    }
+
+  }
+
+}
+
+.slide-right {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+
+    .home-slider-right {
+      overflow: hidden;
+      min-height: 350px;
+
+      @include mq('md', 'max') {
+        min-height: 150px;
+        padding-bottom:55%;
+      }
+
+      @include mq('xg') {
+        min-height: 500px;
+      }
+
+      @include mq('xl') {
+        min-height: 600px;
+      }
+
+    }
+
+}
+
+.slide-left {
+  background-size: cover;
+  position: relative;
+  @include mq('xg', 'max') { // -1200
+    padding-bottom:25px;
+  }
+
+  .home-slider-left {
+    padding:50px;
+    font-size:16px;
+    color: white;
+    width: 600px;
+    padding-top: 100px;
+    padding-right: 60px;
+    right: 0px;
+    position: absolute;
+    //min-height: 500px;
+
+    @include mq('xl', 'max') { // -1440
+        padding: 35px;
+        width: auto;
+        padding-right: 40px;
+        position: relative;
+    }
+
+    @include mq('xg', 'max') { // -1200
+      padding: 30px;
+      width: auto;
+    }
+
+
+  }
+
+  h1.slider-heading {
+    font-size: 60px;
+    line-height: 60px !important;
+    padding-right: 50px;
+    line-height: 1.3;
+
+    @include mq('xl', 'max') {
+      font-size: 50px;
+      line-height: 50px !important;
+    }
+
+    @include mq('xg', 'max') {
+      font-size: 36px;
+      line-height: 36px !important;
+    }
+
+    @include mq('md', 'max') {
+      font-size: 30px;
+      line-height: 30px !important;
+    }
+
+    @include mq('sm', 'max') {
+      font-size: 28px;
+      line-height: 28px !important;
+    }
+
+  }
+
+  .slider-intro {
+    padding-top: 5px;
+    padding-bottom: 40px;
+  }
+
+  .slider-button {
+    padding: 15px 40px;
+    text-align: center;
+    background: $limegreen;
+    font-family: $font2;
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+    -webkit-font-smoothing: auto;
+    @include transitions();
+
+    &:hover {
+      background: black;
+      color: white;
+    }
+
+    .fa {
+      font-size: 21px;
+      vertical-align: middle;
+    }
+
+    @include mq('lg', 'max') {
+      display: inline-block;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+  }
+
+
+
+
+}
+
+.section-home-events {
+
+  &--content {
+    padding-top: 150px;
+    padding-bottom:100px;
+  }
+
+  &--wrap {
+    background-size:cover;
+    background-position: top left;
+  }
+
+  &--title {
+    padding: 0px 20px 20px;
+    display: block;
+    clear: both;
+    h2 {
+      font-size: 44px;
+    }
+  }
+
+}
+
+
+.section-events {
+
+  .grid-card {
+    border: 1px transparent;
+    text-decoration: none;
+    &:hover {
+      .bottom-arrow {
+        background: $purple;
+      }
+    }
+  }
+
+  a { text-decoration: none; }
+
+  .thumb {
+    height: 25px;
+    display: none;
+  }
+
+  .bottom-arrow {
+    background: $purple;
+  }
+
+  .title {
+    color: $purple;
+  }
+
+  .btn-link a {
+    font-size: 16px;
+    padding-left:30px;
+    padding-right: 25px;
+    i {
+    padding-left: 15px;
+    }
+    &:hover {
+      background: $purple;
+    }
+  }
+
+}
+
+// ------------
+// Microsites
+
+.section-microsites {
+  padding-bottom: 80px;
+  background-position: top right;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-color: #f8f8fa;
+
+  .microsites-blurb {
+    padding:50px 0px 60px;
+  }
+
+  h2 {
+    font-size: 2.6rem;
+  }
+
+  .blurb-text {
+    font-size: 16px;
+    width: 80%;
+    @include mq('md', 'max') {
+      width: 100%;
+      margin-bottom: -30px;
+    }
+  }
+
+  .microsite-icon {
+    display: block;
+    width: 99%;
+    max-width: 100%;
+    height: 100px;
+    padding-bottom: 76%;
+    margin-bottom:30px;
+    marign: 0 auto;
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    @include transitions();
+
+    &:hover {
+     transform: scale(1.05);
+     position: relative;
+     z-index: 99;
+     box-shadow: 1px 1px 12px rgb(0 0 0 / 20%);
+    }
+
+  }
+
+}
+
+
+
+
+// ----
+// Tabs
+
+
+
+.tabs-pad {
+    padding: 0px 35px !important;
+    @include mq('md', 'max') {
+     padding: 0 0 !important;
+    }
+
+}
+
+
+.section--home-tabbed {
+
+  &-nav {
+      padding-left: 15px;
+
+      @include mq('md', 'max') {
+        padding-left: 0px;
+      }
+
+  }
+
+  ul#ex1 { // .nav-tabs
+    border:0px;
+    font-size:18px;
+    padding-bottom:0px;
+    margin-bottom:0px !important;
+      @include mq('md', 'max') {
+      }
+   }
+
+  .nav-tabs .nav-item.show .nav-link, .nav-tabs, .nav-link.active {
+    color: black;
+    border-radius:0;
+  }
+
+  .nav-tabs .nav-link {
+    border: 0;
+    color: black;
+    border-radius:0;
+  }
+
+  .nav-link {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-family: $heading2;
+
+     @include mq('md', 'max') {
+       padding: 15px 15px;
+       font-size: 16px;
+     }
+
+     @include mq('sm', 'max') {
+       padding: 15px 10px;
+       font-size: 14px;
+     }
+  }
+
+  .nav-link.active {
+    background: black;
+    color: white;
+  }
+
+  &-content {
+    background: $black;
+    color: white;
+    padding-top: 50px;
+    padding-bottom:10px;
+
+      // for the coloured accents below:
+
+      .grid-card-wrap:nth-child(4n+1) .grid-card .thumb .bottom-arrow {
+        background: #0ba398;
+      }
+
+      .grid-card-wrap:nth-child(4n+2) .grid-card .thumb .bottom-arrow {
+        background: #5a4ca5;
+      }
+
+      .grid-card-wrap:nth-child(4n+3) .grid-card .thumb .bottom-arrow {
+        background: #91cd42;
+      }
+
+      .grid-card-wrap:nth-child(4n+4) .grid-card .thumb .bottom-arrow {
+        background: #0ba398;
+      }
+
+  }
+
+}
+
+
+
+// ----------------
+// RESPONSIVE FIXES
+
+
+@include mq('sm', 'max') {
+
+  #section-events {
+    padding: 0;
+  }
+
+  .section-home-events--content {
+    padding-top: 75px;
+    padding-bottom: 25px;
+  }
+
+  #section--home-tabbed {
+    padding: 0;
+  }
+
+  ul.nav {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+    li a {
+      font-size: 18px !important;
+    }
+  }
+
+  .section-microsites {
+    padding-bottom: 10px;
+  }
+
+}

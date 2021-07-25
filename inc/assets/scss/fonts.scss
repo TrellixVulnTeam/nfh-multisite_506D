@@ -1,0 +1,48 @@
+
+@font-face {
+  font-family: "intelo";
+  src: url("../webfonts/Intelo-SemiBold.eot");                     /* IE9 Compat Modes */
+  src: url("../webfonts/Intelo-SemiBold.woff") format("woff"),     /* Pretty Modern Browsers */
+  url("../webfonts/Intelo-SemiBold.woff2") format("woff2"),   /* Super Modern Browsers */
+  url('webfont.ttf')  format('truetype');                       /* Safari, Android, iOS */
+  /* url('webfont.svg#svgFontName') format('svg');              /* Legacy iOS */
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "intelo-bold";
+  src: url("../webfonts/Intelo-Bold.eot");
+  src: url("../webfonts/Intelo-Bold.woff") format("woff"),
+  url("../webfonts/Intelo-Bold.woff2") format("woff2"),
+  url('webfont.ttf')  format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "muli";
+  src: url("../webfonts/Muli-Regular.eot");
+  src: url("../webfonts/Muli-Regular.woff") format("woff"),
+  url("../webfonts/Muli-Regular.woff2") format("woff2"),
+  url('webfont.ttf')  format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "muli-bold";
+  src: url("../webfonts/Muli-SemiBold.eot");
+  src: url("../webfonts/Muli-SemiBold.woff") format("woff"),
+  url("../webfonts/Muli-SemiBold.woff2") format("woff2"),
+  url('webfont.ttf')  format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}

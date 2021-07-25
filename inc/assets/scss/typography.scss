@@ -1,0 +1,105 @@
+
+// ------
+// Basics
+
+body {
+  font-family: $font1;
+  font-size:14px;
+  color: #000000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.font { font-family: $font1; }
+.font-alt { font-family: $font2; font-weight: bold; }
+
+.heading, h1, h2, h3, h4, h5, h6 {  font-family: $heading1 }
+.heading-alt { font-family: $heading2; }
+
+.rmv-smooth {
+  -webkit-font-smoothing: initial;
+  -moz-osx-font-smoothing: initial;
+}
+.smoothing {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a, button, link {
+  @include transitions();
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+
+.far {
+  font-weight:800 !important;
+}
+
+// ------------
+// Button Style
+
+// a link inside button
+.btn-link a {
+  background: black;
+  color: white;
+  display:inline-block;
+  clear:both;
+  padding:15px 40px;
+  color: white !important;
+  font-family: $heading2;
+  font-size: 18px;
+  text-decoration: none !important;
+  @include transitions();
+
+  &:hover {
+    background: #333;
+    color: white;
+    text-decoration: none !important;
+  }
+
+}
+
+// button is the a element
+.btn {
+  padding: 15px 40px;
+  text-align: center;
+  background: #555;
+  font-family: $font2;
+  font-weight: bold;
+  font-size: 13px;
+  display: inline-block;
+  color: white;
+  width: auto;
+  text-decoration: none;
+  -webkit-font-smoothing: auto;
+  @include transitions();
+  border-radius: 0;
+
+  &.black {
+    background: black;
+    color: white;
+    padding-right: 28px;
+    font-size: 16px;
+    &:hover { background: $purple; }
+  }
+
+  &:hover {
+    background: black;
+    color: white;
+  }
+
+  &-print {
+    background: #555;
+    color: white;
+    padding: 15px 10px;
+  }
+
+  &-share {
+    background: $teal;
+    color: white;
+    padding: 15px 1px;
+  }
+
+}
