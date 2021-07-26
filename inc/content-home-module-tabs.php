@@ -59,7 +59,7 @@
                           array(
                             'taxonomy' => 'bulletin_category',
                             'field' => 'slug',
-                            'terms' => 'words-from-russell'
+                            'terms' => 'nursing-midwifery'
                           )
                         ),
                       );
@@ -105,7 +105,7 @@
                           array(
                             'taxonomy' => 'bulletin_category',
                             'field' => 'slug',
-                            'terms' => 'words-from-russell',
+                            'terms' => 'nursing-midwifery',
                             'operator' => 'NOT IN',
                           )
                         ),
@@ -196,7 +196,7 @@
                      array(
                        'taxonomy' => 'bulletin_category',
                        'field' => 'slug',
-                       'terms' => 'words-from-russell'
+                       'terms' => 'nursing-midwifery'
                      )
                    ),
                  );
@@ -246,7 +246,7 @@
                                     array(
                                         'taxonomy' => 'bulletin_category',
                                         'field' => 'slug',
-                                        'terms' => 'words-from-russell',
+                                        'terms' => 'nursing-midwifery',
                                         'include_children' => true,
                                         'operator' => 'NOT IN'
                                       )

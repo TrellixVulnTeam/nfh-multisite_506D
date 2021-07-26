@@ -289,7 +289,7 @@
                      array(
                          'taxonomy' => 'bulletin_category',
                          'field' => 'slug',
-                         'terms' => 'words-from-russell',
+                         'terms' => 'nursing-midwifery',
                          'include_children' => true,
                          'operator' => 'NOT IN'
                        )
