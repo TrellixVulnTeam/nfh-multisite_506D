@@ -115,6 +115,35 @@
 		<?php endwhile; ?>
 	<?php endif; ?>
 
+
+  <?php if ($post_type_name == "profiles") { ?>
+
+		<div class="sidebar--events">
+			<div class="events-info" style="font-weight: bold;">
+				<h3>Contact Information</h3>
+					<?php if (get_field('contact_email')) { ?>
+						<p>
+							<i class="fas fa-envelope"></i> &nbsp; <a href="<?php the_field('contact_email'); ?>"><?php the_field('contact_email'); ?></a>
+						</p>
+					<?php } ?>
+					<?php if (get_field('contact_phone')) { ?>
+						<p>
+							<i class="fas fa-phone"></i> &nbsp; <a href="tel:<?php the_field('contact_phone'); ?>"><?php the_field('contact_phone'); ?></a>
+						</p>
+					<?php } ?>
+					<?php if (get_field('contact_location')) {
+						$contact_location = get_field('contact_location');
+						?>
+						<p>
+							<i class="fas fa-map-marker"></i> &nbsp; <?php echo $contact_location->name ; ?>
+						</p>
+					<?php } ?>
+				</div>
+		</div>
+
+	<?php } ?>
+
+
   <?php if ($post_type_name == "events") { ?>
 
 		<div class="sidebar--events">
@@ -243,14 +272,7 @@
 										'numberposts' => '5',
 										'post_type' => 'bulletins',
 										'post__not_in' => array( $post->ID ),
-										'tax_query' => array(
-									        array(
-									            'taxonomy' => 'bulletin_category',
-									            'field'    => 'slug',
-									            'terms'    => $recentpost_cat,
-									            'operator' => 'IN'
-									        )
-					    			)
+
 								);
 						    $recent_posts = wp_get_recent_posts( $args );
 
@@ -276,7 +298,7 @@
 	if ( ($post_type_name == "news") && (get_the_terms($post->ID, 'news_category')) ) { ?>
 		<?php if (!$hiderelated) { ?>
 			<div class="sidebar--related sidebar--recent">
-					<h3>Recent News</h3>
+					<h3>Recent articles</h3>
 					<ul class="boxed">
 						<?php
 							$terms = get_the_terms( $post->ID, 'news_category' );
@@ -288,14 +310,6 @@
 									'numberposts' => '5',
 									'post_type' => 'news',
 									'post__not_in' => array( $post->ID ),
-									'tax_query' => array(
-												array(
-														'taxonomy' => 'news_category',
-														'field'    => 'slug',
-														'terms'    => $recentpost_cat,
-														'operator' => 'IN'
-												)
-									)
 							);
 							$recent_posts = wp_get_recent_posts( $args );
 					    foreach( $recent_posts as $recent ) { ?>

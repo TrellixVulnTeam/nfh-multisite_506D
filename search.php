@@ -7,6 +7,9 @@
  * @package WP_Bootstrap_Starter
  */
 
+ 	$page_top_background = get_field('page_top_background', 'options');
+  $page_bottom_background  = get_field('page_bottom_background', 'options');
+
 get_header(); ?>
 
 
@@ -15,7 +18,7 @@ get_header(); ?>
   $template_url = get_template_directory_uri();
 ?>
 
-<div id="single-page-bg" style="background-image: url('<?php echo $template_url; ?>/inc/assets/img/page-banner-bg.png'), url('<?php echo $template_url; ?>/inc/assets/img/page-lower-bg.png');">
+	<div id="single-page-bg" style="background-image: url('<?php echo $page_top_background['url']; ?>'), url('<?php echo $page_bottom_background['url']; ?>');">
 
 	<div id="single-page-header" class="body">
 		<div class="container no-pad">
@@ -65,7 +68,7 @@ get_header(); ?>
                     </p>
                     <p>
                       Published on: <?php echo get_the_date(); ?>
-                    </p>                    
+                    </p>
                  </a>
 							<?php
 							endwhile; ?>

@@ -28,6 +28,10 @@
  <?php if( have_rows('standard_page_content') ): ?>
      <?php while( have_rows('standard_page_content') ): the_row(); ?>
 
+        <?php if ( is_singular('profiles') ) { ?>
+
+        <?php } ?>
+
         <?php if ( is_singular('events') ) { ?>
           <div style="display:none;">
           <?php while( have_rows('sidebar_additional_content') ): the_row(); ?>
@@ -68,7 +72,7 @@
         </div>
         <?php } ?>
 
-         <?php if( get_row_layout() == 'free_text_wysiwyg' ): ?>
+        <?php if( get_row_layout() == 'free_text_wysiwyg' ): ?>
            <div class="free-text-area">
              <?php the_sub_field('free_text_area'); ?>
            </div>

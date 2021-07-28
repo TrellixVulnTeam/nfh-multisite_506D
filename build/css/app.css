@@ -352,7 +352,7 @@ h2 {
   display: block;
   position: relative;
   min-height: 100px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   background: #F7F7FC;
   border: 1px solid #ededff;
   color: #000000;
@@ -423,6 +423,21 @@ h2 {
     padding-bottom: 57%;
   }
 }
+.grid-card .thumb-small {
+  position: relative;
+  display: block;
+  background-position: center center;
+  background-size: cover;
+  background-color: #cccccc;
+  background-repeat: no-repeat;
+}
+@media only screen and (min-width: 1440px) {
+  .grid-card .thumb-small {
+    width: 290px;
+    height: 35px;
+    padding-bottom: 38%;
+  }
+}
 .grid-card .bottom-arrow {
   position: relative;
   bottom: 0px;
@@ -469,6 +484,20 @@ h2 {
 }
 .grid-card-dark:hover .bottom-arrow {
   background: rgba(200, 200, 200, 0.5);
+}
+
+@media only screen and (min-width: 1440px) {
+  .profile-grid {
+    display: flex !important;
+  }
+}
+.profile-grid .title {
+  font-size: 20px;
+}
+.profile-grid .content {
+  font-size: 15px;
+  font-weight: bold;
+  font-family: "intelo-bold", Helvetica, sans-serif;
 }
 
 .section-cards-dark .grid-card {
@@ -651,6 +680,15 @@ div .grid-card-wrap:nth-child(4n+4) .grid-card .bottom-arrow {
   padding-bottom: 15px;
 }
 
+.inner-container .heading h2 {
+  padding-bottom: 5px;
+  font-size: 2.1rem;
+  margin-top: 20px;
+  border-top: 1px solid #e6e6f5;
+  padding-top: 30px;
+  width: 98%;
+}
+
 .content-divider {
   margin-top: 60px;
 }
@@ -658,8 +696,8 @@ div .grid-card-wrap:nth-child(4n+4) .grid-card .bottom-arrow {
 .main-content {
   background-color: white;
   padding-top: 50px;
-  padding-left: 80px;
-  padding-right: 80px;
+  padding-left: 60px;
+  padding-right: 60px;
   min-height: 450px;
 }
 @media only screen and (max-width: 1199px) {
@@ -836,6 +874,10 @@ h2.filter-head {
   padding-right: 10px;
 }
 
+.test {
+  display: inherit;
+}
+
 #section--home-slider.slick-initialized .slick-slide {
   display: flex !important;
 }
@@ -948,8 +990,8 @@ h2.filter-head {
   transition: all 250ms ease-out;
 }
 .slide-left .slider-button:hover {
-  background: black;
-  color: white;
+  background: black !important;
+  color: white !important;
 }
 .slide-left .slider-button .fa {
   font-size: 21px;
@@ -1015,7 +1057,7 @@ h2.filter-head {
 .section-microsites {
   padding-bottom: 80px;
   background-position: top right;
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
   background-color: #f8f8fa;
 }
@@ -1024,8 +1066,10 @@ h2.filter-head {
 }
 .section-microsites h2 {
   font-size: 2.6rem;
+  color: white;
 }
 .section-microsites .blurb-text {
+  color: white;
   font-size: 16px;
   width: 80%;
 }
@@ -1088,7 +1132,7 @@ h2.filter-head {
 }
 .section--home-tabbed .nav-tabs .nav-link {
   border: 0;
-  color: black;
+  color: white;
   border-radius: 0;
 }
 .section--home-tabbed .nav-link {
@@ -1155,10 +1199,6 @@ h2.filter-head {
   }
   ul.nav li a {
     font-size: 18px !important;
-  }
-
-  .section-microsites {
-    padding-bottom: 10px;
   }
 }
 .services_module {
@@ -1481,7 +1521,7 @@ header#masthead {
 }
 .topbar--right a {
   font-family: "intelo-bold", Helvetica, sans-serif;
-  font-size: 13px;
+  font-size: 13.5px;
   text-decoration: none !important;
   background-color: #2A2A2A !important;
   padding: 18px 50px 18px 40px !important;
@@ -1617,6 +1657,7 @@ header#masthead {
 }
 .logo--main img {
   width: 210px;
+  max-height: 74px;
   height: auto;
   max-width: 100%;
   -webkit-transition: all 250ms ease-out;
@@ -1704,7 +1745,7 @@ header .header-desktop-menu .current-page-ancestor a {
   height: 100%;
   font-size: 24px;
   background: #20bfb4;
-  color: black;
+  color: white;
   cursor: pointer;
   text-decoration: none;
   margin-left: 0px;
@@ -1730,6 +1771,19 @@ header .header-desktop-menu .current-page-ancestor a {
   #search-btn {
     font-size: 18px;
   }
+}
+#search-btn:hover {
+  background: black;
+}
+
+#search-modal .close {
+  -webkit-transition: all 250ms ease-out;
+  -moz-transition: all 250ms ease-out;
+  -o-transition: all 250ms ease-out;
+  transition: all 250ms ease-out;
+}
+#search-modal .close:hover {
+  background: black;
 }
 
 .mobile-btn-contain {
@@ -2187,6 +2241,10 @@ footer .footer--credits, .footerbg .footer--credits {
 footer .footer--credits a, .footerbg .footer--credits a {
   display: inline-block;
   text-align: right;
+}
+
+.events-info a {
+  color: black;
 }
 
 .sidebar-content {

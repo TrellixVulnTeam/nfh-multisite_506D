@@ -285,7 +285,7 @@
      'orderby' => 'date',
      'order'   => 'DESC',
      'paged' => $paged ,
-     'tax_query' => array(
+     /*'tax_query' => array(
                      array(
                          'taxonomy' => 'bulletin_category',
                          'field' => 'slug',
@@ -293,7 +293,7 @@
                          'include_children' => true,
                          'operator' => 'NOT IN'
                        )
-                    ),
+                    ),*/
    );
 
  } elseif ( ($main_post_type == 'bulletins') && ($what_to_show) ) {

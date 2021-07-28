@@ -14,6 +14,9 @@
 	$this_page_id = get_the_ID();
 	$sidebar = get_field('show_sidebar_on_page', $this_post_id);
 
+	$page_top_background = get_field('page_top_background', 'options');
+  $page_bottom_background  = get_field('page_bottom_background', 'options');
+
 	// If is QRG Download ...
 	if ( get_field ('service_type_link', $this_page_id) ) {
 		$redirect_download = get_field('service_type_link');
@@ -31,7 +34,7 @@
 
 <?php while ( have_posts() ) : the_post(); ?>
 
-<div id="single-page-bg" style="background-image: url('<?php echo $template_url; ?>/inc/assets/img/page-banner-bg.png'), url('<?php echo $template_url; ?>/inc/assets/img/page-lower-bg.png');">
+<div id="single-page-bg" style="background-image: url('<?php echo $page_top_background['url']; ?>'), url('<?php echo $page_bottom_background['url']; ?>');">
 
 	<div id="single-page-header" class="body">
 		<div class="container no-pad">

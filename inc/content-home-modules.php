@@ -8,6 +8,9 @@
   $this_page_id = get_the_ID();
   $sidebar = get_field('show_sidebar_on_page', $this_post_id);
 
+  $home_banner_background = get_field('home_banner_background', 'options');
+  $home_button_links = get_field('button_links', 'options');
+
  ?>
 
  <?php if( have_rows('home_banners') ): ?>
@@ -17,7 +20,7 @@
  		    		$image = get_sub_field('image');
  		    	?>
           <div class="row no-gutters slick-slide">
-   					<div class="slide-left col-12 col-xs-12 col-md-7 col-lg-7 col-xl-5" style="background-image: url('<?php echo $template_url; ?>/inc/assets/img/home-news-bg.png'); ">
+   					<div class="slide-left col-12 col-xs-12 col-md-7 col-lg-7 col-xl-5" style="background-image: url('<?php echo $home_banner_background['url']; ?>'); ">
    						<div class="home-slider-left">
    							<h1 class="slider-heading" role="heading"><?php the_sub_field('heading'); ?></h1>
    							<div class="slider-intro" role="description"><?php the_sub_field('text'); ?></div>
@@ -25,7 +28,7 @@
                       $button_link = get_sub_field('button_link');
                       $button_link_url = $button_link['url'];
                 ?>
-   							<a class="slider-button" role="link button" href="<?php echo $button_link_url; ?>"><?php the_sub_field('button_text'); ?> &nbsp; <i class="far fa-long-arrow-right"></i></a>
+   							<a class="slider-button" role="link button" style="background:<?php echo $home_button_links; ?>" href="<?php echo $button_link_url; ?>"><?php the_sub_field('button_text'); ?> &nbsp; <i class="far fa-long-arrow-right"></i></a>
    						</div>
    					</div>
    					<div class="slide-right col-12 col-xs-12 col-md-5 col-lg-5 col-xl-7" style="background-image:url('<?php echo esc_url($image['url']); ?>');">

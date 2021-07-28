@@ -19,6 +19,8 @@
            $post_title = (get_sub_field('item'))->post_title; // set the post_title and others
            $itemobj = get_sub_field('item');
            $item_id = $itemobj->ID;
+           $post_type_name = get_post_type( $item_id );
+
            /*$post_excerpt = (get_sub_field('item'))->post_title;
            $post_thumb = (get_sub_field('item'))->post_title;
            $post_news_category = (get_sub_field('item'))->post_title; // build categories to show if available
@@ -28,14 +30,22 @@
            $post_category = (get_sub_field('item'))->post_title;
            $post_locations= (get_sub_field('item'))->post_title;*/
          ?>
-
-         <?php if ( $pre_posts == '3' ) { // if row of 3 ?>
+         <?php if ( $pre_posts == '2' ) { // if row of 3 ?>
+           <div class="grid-card-wrap col-6 col-sm-6 col-xs-6 col-md-6 col-lg-6 col-xl-6">
+         <?php } elseif ( $pre_posts == '3' ) { // if row of 3 ?>
            <div class="grid-card-wrap col-6 col-sm-6 col-xs-6 col-md-6 col-lg-4 col-xl-4">
          <?php } elseif ( $pre_posts == '4' ) { // if row of 4 ?>
            <div class="grid-card-wrap col-6 col-sm-6 col-xs-6 col-md-6 col-lg-3 col-xl-3">
          <?php } ?>
              <a href="<?php the_permalink($item_id); ?>" class="grid-card-single">
-               <div class="grid-card">
+               <div class="grid-card <?php if ( $post_type_name == "profiles" ) { ?>profile-grid<?php } ?>">
+
+                 <?php if ( $post_type_name == "profiles" ) { ?>
+                   <?php if (get_the_post_thumbnail_url($item_id)) { ?>
+                     <div class="thumb thumb-small" style="background-image:url('<?php echo esc_url(get_the_post_thumbnail_url($item_id)); ?>');"></div>
+                   <?php } ?>
+                 <?php } ?>
+
                  <div class="inner-wrap">
                    <?php if (get_sub_field('show_date')) { ?>
                      <div class="date">
@@ -53,12 +63,12 @@
                    </div>
                    <div class="content font-light">
                      <?php
-                       if (get_field('excerpt')) {
+                       if (get_field('excerpt', $item_id)) {
 
-                         if(strlen( get_field('excerpt') ) > 90) {
-                           echo substr( get_field('excerpt') , 0, 90) . '...';
+                         if(strlen( get_field('excerpt', $item_id) ) > 90) {
+                           echo substr( get_field('excerpt', $item_id) , 0, 90) . '...';
                          } else {
-                           echo get_field('excerpt') . '...';
+                           echo get_field('excerpt', $item_id) . '...';
                          }
 
 
@@ -116,18 +126,25 @@
                    <?php } ?>
                  </div>
 
-                 <?php if (get_sub_field('thumbnail')) {
-                   $thumbm = get_sub_field('thumbnail');
-                   ?>
-                   <div class="thumb" style="background-image:url('<?php echo $thumbm['url']; ?>');"></div>
-                 <?php } ?>
-                 <?php if (get_the_post_thumbnail_url($item_id)) { ?>
-                   <div class="thumb" style="background-image:url('<?php echo esc_url(get_the_post_thumbnail_url($item_id)); ?>');"></div>
-                 <?php } ?>
+                 <?php if ( $post_type_name == "profiles" ) { ?>
 
-                 <div class="bottom-arrow">
-                    <i class="fas fa-arrow-right"></i>
-                 </div>
+                 <?php } else {  ?>
+
+                   <?php if (get_sub_field('thumbnail')) {
+                     $thumbm = get_sub_field('thumbnail');
+                     ?>
+                     <div class="thumb" style="background-image:url('<?php echo $thumbm['url']; ?>');"></div>
+                   <?php } ?>
+                   <?php if (get_the_post_thumbnail_url($item_id)) { ?>
+                     <div class="thumb" style="background-image:url('<?php echo esc_url(get_the_post_thumbnail_url($item_id)); ?>');"></div>
+                   <?php } ?>
+
+                   <div class="bottom-arrow">
+                      <i class="fas fa-arrow-right"></i>
+                   </div>
+
+
+                 <?php } ?>
 
                </div>
              </a>

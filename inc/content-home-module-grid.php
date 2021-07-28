@@ -51,7 +51,7 @@
      // $category_to_show = esc_html( $subcategory->slug );     // aka subcategory
  ?>
 
- <div class="container-fluid section-home-events--wrap" style="background-image:url('<?php echo get_template_directory_uri() . '/inc/assets/img/home-events-bg.jpg' ?>');">
+ <div class="container-fluid section-home-events--wrap" style="background:white;">
 
 <div class="section-events container">
 

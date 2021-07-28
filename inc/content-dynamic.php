@@ -6,7 +6,7 @@
   $this_post_id = get_the_ID();
   $this_page_id = get_the_ID();
   $sidebar = get_field('show_sidebar_on_page', $this_post_id);
-
+  
  ?>
 
 
@@ -28,6 +28,19 @@
    <?php if ( get_row_layout() == 'grid_of_items_manual' ) : ?>
        <?php require get_template_directory() . '/inc/content-dynamic-grid-manual.php'; ?>
    <?php endif; ?>
+
+   <?php if( get_row_layout() == 'heading' ): ?>
+     <div class="heading">
+       <h2><?php the_sub_field('heading'); ?></h2>
+     </div>
+   <?php endif; ?>
+
+   <?php if ( get_row_layout() == 'free_text_area' ): ?>
+     <div class="content">
+       <?php the_sub_field('content'); ?>
+     </div>
+   <?php endif; ?>
+
 
  <?php endwhile; ?>
 

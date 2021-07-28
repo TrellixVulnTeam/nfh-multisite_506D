@@ -118,7 +118,7 @@
 
       ?>
 
-      <div class="thumb" style="background-image:url('<?php echo esc_url($post_thumb['url']); ?>');"></div>
+      <div class="thumb" style="background-image:url('<?php echo ($post_thumb['url']); ?>');"></div>
 
       <?php
 
@@ -132,7 +132,7 @@
 
   <?php if (  (get_the_post_thumbnail_url()) && ($thumbterm == null) ) { ?>
 
-    <div class="thumb" style="background-image:url('<?php echo esc_url($post_thumb); ?>');"></div>
+    <div class="thumb" style="background-image:url('<?php echo ($post_thumb); ?>');"></div>
 
   <?php } ?>
 
