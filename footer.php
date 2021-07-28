@@ -12,7 +12,7 @@
 
 ?>
 <?php  $footerbg = get_template_directory_uri() . '/inc/assets/img/footer-bg.png'; ?>
-<footer id="colophon" class="footer-wrap" role="contentinfo" style="background-image:url('<?php echo $footerbg; ?>');">
+<footer id="colophon" class="footer-wrap" role="contentinfo">
   <div class="container-fluid footer-wrap-upper">
       <div class="footer-inner container">
         <div class="row">

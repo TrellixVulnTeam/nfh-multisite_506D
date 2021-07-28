@@ -7,11 +7,13 @@
   $this_page_id = get_the_ID();
   $sidebar = get_field('show_sidebar_on_page', $this_post_id);
 
+  $section_background = get_sub_field('section_background');
+
  ?>
 
   <?php $footerbg = get_template_directory_uri() . '/inc/assets/img/microsite_bg.jpg'; ?>
 
-  <div class="section-microsites container-fluid no-pad" style="background-image:url('<?php echo $footerbg; ?>');" >
+  <div class="section-microsites container-fluid no-pad" style="background-image:url('<?php echo $section_background['url']; ?>');" >
   	<div class="container content-grid pad-2">
 
   			<div class="row microsites-blurb">
@@ -29,7 +31,7 @@
             $terms = get_terms([
               'taxonomy' => 'departments',
               'hide_empty' => false,
-              'number'    => 8,
+              'number'    => 4,
             ]);
             foreach($terms as $term) {
                 $term_id = $term->term_id;

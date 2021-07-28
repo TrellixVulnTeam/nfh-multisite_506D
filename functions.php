@@ -329,6 +329,10 @@ add_action( 'wp_enqueue_scripts', 'remove_block_css', 100 );
 
 
 
+// shove YOAST to bottom
+// ----------
+add_filter( 'wpseo_metabox_prio', function() { return 'low'; } );
+
 
 // ------------------------------------------------
 // Create options pages for clients
@@ -392,8 +396,16 @@ function the_breadcrumb() {
 						echo '<a href="'.site_url().'/news-updates/">News & Updates</a>';
 					}
 
+					if ( get_post_type( get_the_ID() ) == 'profiles' ) {
+						echo '<a href="'.site_url().'/nursing-midwifery-profiles/">Nursing & Midwifery Profiles</a>';
+					}
+
 					if ( get_post_type( get_the_ID() ) == 'events' ) {
 						echo '<a href="'.site_url().'/westerly-events/">Events</a>';
+					}
+
+					if ( get_post_type( get_the_ID() ) == 'qrg' ) {
+						echo '<a href="'.site_url().'/resources/">Resources</a>';
 					}
 
 					if ( get_post_type( get_the_ID() ) == 'qrg' ) {

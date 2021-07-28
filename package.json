@@ -11,5 +11,22 @@
     "gulp-rename": "^2.0.0",
     "gulp-uglify": "^3.0.2",
     "gulp-uglifycss": "^1.1.0"
-  }
+  },
+  "name": "nfh-multisite",
+  "description": "grindstone-base",
+  "version": "1.0.0",
+  "main": "gulpfile-new.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grindstonecreative/nfh-multisite.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/grindstonecreative/nfh-multisite/issues"
+  },
+  "homepage": "https://github.com/grindstonecreative/nfh-multisite#readme"
 }

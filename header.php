@@ -14,17 +14,39 @@
    $post_id = $post->ID;
    $post_type_name = get_post_type( $post_id );
  }
+
+ // Sub-Site Theming
+ // -------------------
+ // Add the classes into elements as required
+
+ // Colours
+
+ $header_menu_link_accent = get_field('header_menu_link_accent', 'options'); // menu link underlines
+ $search_button = get_field('search_button', 'options'); // search icon
+ $footer_background_colour = get_field('footer_background_colour', 'options');
+ $main_accent_colour = get_field('main_accent_colouur', 'options'); // used for links, accents on tabs, sub headings inside pages, arrows, and more
+ $secondary_accent_colour = get_field('secondary_accent_colour', 'options');
+ $grid_card_border_colour = get_field('grid_card_border_colour', 'options');
+ $grid_card_background_colour = get_field('grid_card_background_colour', 'options');
+ $item_color_1 = get_field('item_color_1', 'options');  // automatic colouring on the grid items, bottom arrow accent colours
+ $item_color_2 = get_field('item_color_2', 'options');
+ $item_color_3 = get_field('item_color_3', 'options');
+ $item_color_4 = get_field('item_color_4', 'options');
+
+ $home_banner_background = get_field('home_banner_background', 'options');
+ $home_button_links = get_field('button_links', 'options');
+ $news_background = get_field('news_background', 'options');
+ $news_background_active = get_field('news_background_active', 'options');
+ $page_top_background = get_field('page_top_background', 'options');
+ $page_bottom_background  = get_field('page_bottom_background', 'options');
+
 ?><!DOCTYPE html>
-
 <html <?php language_attributes(); ?>>
-
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="profile" href="http://gmpg.org/xfn/11">
-
     <link rel="apple-touch-icon" sizes="180x180" href="<?php echo get_template_directory_uri(); ?>/inc/assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="<?php echo get_template_directory_uri(); ?>/inc/assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="<?php echo get_template_directory_uri(); ?>/inc/assets/favicon/favicon-16x16.png">
@@ -32,8 +54,120 @@
     <link rel="mask-icon" href="<?php echo get_template_directory_uri(); ?>/inc/assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-
     <?php wp_head(); ?>
+    <style type="text/css">
+
+      .header_menu_link_accent { color: <?php echo $header_menu_link_accent ;?>; }
+      .search_button { color: <?php echo $search_button; ;?> }
+      .footer_background_colour { color: <?php echo $footer_background_colour ;?>; }
+      .main_accent_colour { color: <?php echo $main_accent_colour ;?>; }
+      .secondary_accent_colour { color: <?php echo $secondary_accent_colour ;?>; }
+      .grid_card_border_colour { color: <?php echo $grid_card_border_colour ;?>; }
+      .grid_card_background_colour { color: <?php echo $grid_card_background_colour ;?>; }
+      .item_color_1 { color: <?php echo $item_color_1 ;?>; }
+      .item_color_2 { color: <?php echo $item_color_2 ;?>; }
+      .item_color_3 { color: <?php echo $item_color_3 ;?>; }
+      .item_color_4 { color: <?php echo $item_color_4 ;?>; }
+      .home_button_link { color: <?php echo $home_button_links; ?>; }
+      .news_background { color: <?php echo $news_background; ?>; }
+      .news_background_active { color: <?php echo $news_background_active; ?>; }
+
+      footer .footer-lower .footer--social a:hover, .footerbg .footer-lower .footer--social a:hover { background: transparent; }
+      .home_banner_background {
+        background-image: url('<?php echo $home_banner_background['url']; ?>') !important;
+      }
+      .page_top_background {
+        background-image: url('<?php echo $page_top_background['url']; ?>') !important;
+      }
+      .page_bottom_background {
+        background-image: url('<?php echo $page_bottom_background['url']; ?>') !important;
+      }
+
+      header .header-desktop-menu .current_page_item a, header .header-desktop-menu .current-page-ancestor a, header .header-desktop-menu li a:hover {
+          border-bottom: 10px solid <?php echo $header_menu_link_accent; ?>;
+      }
+
+      #search-btn, #search-modal .close {
+        background: <?php echo $search_button ;?>;
+      }
+
+      .btn.black:hover {
+        background-color: <?php echo $secondary_accent_colour; ?>;
+      }
+
+      .topbar .menu-quicklinks .dropdown-menu li.highlight a {
+        background: <?php echo $search_button ;?> !important;
+        color: white !important;
+      }
+
+      .topbar .menu-quicklinks .dropdown-menu li.highlight a:hover {
+        background: black !important;
+      }
+
+      #section--home-tabbed {
+        background-color: <?php echo $news_background; ?>;
+      }
+
+      .section--home-tabbed-content, .section--home-tabbed .nav-link.active {
+        background-color: <?php echo $news_background_active; ?>;
+      }
+
+      .topbar--right a.sub:hover, .topbar .dropdown-menu a:hover, .topbar a:hover {
+        background-color: <?php echo $header_menu_link_accent; ?> !important;
+      }
+
+      .topbar .menu-quicklinks a:hover {
+        background-color: <?php echo $header_menu_link_accent; ?> !important;
+      }
+
+      div .grid-card-wrap:nth-child(4n+1) .grid-card .bottom-arrow {
+        background: <?php echo $item_color_1; ?> !important;
+      }
+
+      div .grid-card-wrap:nth-child(4n+2) .grid-card .bottom-arrow {
+        background: <?php echo $item_color_2; ?> !important;
+      }
+
+      div .grid-card-wrap:nth-child(4n+3) .grid-card .bottom-arrow {
+        background: <?php echo $item_color_3; ?> !important;
+      }
+
+      div .grid-card-wrap:nth-child(4n+4) .grid-card .bottom-arrow {
+        background: <?php echo $item_color_4; ?> !important;
+      }
+
+      .section-events .title, .profile-grid .content {
+        color: <?php echo $secondary_accent_colour; ?>;
+      }
+      .section-events .bottom-arrow, .section-events .btn-link a:hover {
+        background-color: <?php echo $secondary_accent_colour; ?> !important;
+      }
+
+      footer, .footerbg {
+        background-color: <?php echo $footer_background_colour ;?>;
+      }
+
+      #single-page-content #breadcrumbs a, .single-page-content #breadcrumbs a, #single-page-content #breadcrumbs, .single-page-content #breadcrumbs {
+        color: white;
+      }
+
+      .inner-container a, .sidebar h3, .sidebar.related-depts ul.boxed li a, .inner-container ul.service_listings i, .sidebar.related-depts ul.boxed li a:before, .sidebar--recent ul.boxed li a:before, h2.filter-head {
+        color: <?php echo $secondary_accent_colour; ?>;
+      }
+
+      .btn-print {
+
+      }
+      .sidebar ul.boxed li a:hover, .inner-container ul.accordions .accordion-title:before, .btn-share, .inner-container ul#the_alphabet_links li:hover {
+        background-color: <?php echo $main_accent_colour; ?>;
+      }
+
+      .btn-print {
+        background-color: <?php echo $footer_background_colour ;?>;
+      }
+
+
+    </style>
 
     <style type="text/css" media="print">
       body { visibility:hidden; padding: 0; margin: 0; }
@@ -47,6 +181,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
+
 
 <body <?php body_class(''); ?>>
 
@@ -81,7 +216,7 @@
             <?php while( have_rows('custom_links', 'options') ): the_row();
                 $toplink = get_sub_field('link');
                 ?>
-                <a class="sub" target="_blank "href="<?php echo get_the_permalink($toplink->ID) ?>">
+                <a class="sub" href="<?php echo get_the_permalink($toplink->ID) ?>">
                     <?php echo $toplink->post_title; ?>
                 </a>
             <?php endwhile; ?>

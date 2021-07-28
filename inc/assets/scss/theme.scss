@@ -77,11 +77,11 @@ header#masthead {
     @include mq('md', 'max') {
       display: none;
     }
-    
+
 
     a {
       font-family: $heading1;
-      font-size: 13px;
+      font-size: 13.5px;
       text-decoration: none !important;
       background-color: #2A2A2A  !important;
       padding: 18px 50px 18px 40px  !important;
@@ -222,6 +222,7 @@ header#masthead {
 
   img {
     width: 210px;
+    max-height: 74px;
     height: auto;
     max-width: 100%;
     @include transitions();
@@ -304,7 +305,7 @@ header .header-desktop-menu {
   height: 100%;
   font-size: 24px;
   background: $teal;
-  color: black;
+  color: white;
   cursor: pointer;
   text-decoration: none;
   margin-left: 0px;
@@ -323,6 +324,17 @@ header .header-desktop-menu {
   }
   @include mq('sm', 'max') {
     font-size: 18px;
+  }
+  &:hover {
+    background: black;
+  }
+}
+
+#search-modal .close {
+  @include transitions();
+
+  &:hover {
+    background: black;
   }
 }
 
@@ -690,6 +702,10 @@ footer, .footerbg {
 
 // --------
 // Sidebar
+
+.events-info a {
+    color: black;
+}
 
 .sidebar { //aside
 

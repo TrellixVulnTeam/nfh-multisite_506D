@@ -4,7 +4,7 @@
 
 // NOTE: Some responsive code is at the bottom of this page , for Home CSS .
 
-
+.test { display: inherit; }
 
 #section--home-slider {
 
@@ -122,8 +122,8 @@
     @include transitions();
 
     &:hover {
-      background: black;
-      color: white;
+      background: black !important;
+      color: white !important;
     }
 
     .fa {
@@ -215,7 +215,7 @@
 .section-microsites {
   padding-bottom: 80px;
   background-position: top right;
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
   background-color: #f8f8fa;
 
@@ -225,9 +225,11 @@
 
   h2 {
     font-size: 2.6rem;
+    color: white;
   }
 
   .blurb-text {
+    color: white;
     font-size: 16px;
     width: 80%;
     @include mq('md', 'max') {
@@ -305,7 +307,7 @@
 
   .nav-tabs .nav-link {
     border: 0;
-    color: black;
+    color: white;
     border-radius:0;
   }
 
@@ -391,8 +393,5 @@
     }
   }
 
-  .section-microsites {
-    padding-bottom: 10px;
-  }
 
 }

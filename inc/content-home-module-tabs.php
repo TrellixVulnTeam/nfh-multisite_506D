@@ -13,7 +13,7 @@
 
  ?>
 
-<div id="section--home-tabbed" class="section--home-tabbed container-fluid" style="background: #20bfb4;">
+<div id="section--home-tabbed" class="section--home-tabbed container-fluid">
  <div class="container">
  <div class="row">
     <div class="col-12">
@@ -181,7 +181,7 @@
                </div>
          </div>
 
-         <div class="TAB-2-CONTENT tab-pane fade" id="ex1-tabs-2" role="tabpanel" aria-labelledby="ex1-tab-2" style="background: black; color: white;">
+         <div class="TAB-2-CONTENT tab-pane fade" id="ex1-tabs-2" role="tabpanel" aria-labelledby="ex1-tab-2" style="color: white;">
              <div class="container-fluid no-gutters no-pad content-grid section-cards-dark">
                <div class="row no-gutters tab-slide-1">
                <?php

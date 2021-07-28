@@ -41,10 +41,10 @@
 
 		// ---------------------
 		// text sidebar override
-		$("body.single-bulletins #btn-print").text("Print this Bulletin");
-		$("body.single-bulletins #btn-share").text("Share this Bulletin");
-		$("body.single-events #btn-print").text("Print this Event");
-		$("body.single-events #btn-share").text("Share this Event");
+		$("body.single-bulletins #btn-print").html("<i class='fas fa-print'></i> &nbsp; Print this Bulletin");
+		$("body.single-bulletins #btn-share").html("<i class='fas fa-share'></i> &nbsp; Share this Bulletin");
+		$("body.single-events #btn-print").html("<i class='fas fa-print'></i> &nbsp; Print this Event");
+		$("body.single-events #btn-share").html("<i class='fas fa-share'></i> &nbsp; Share this Event");
 		$("#btn-share").click(function(e){
 			$("#share-box").fadeToggle('fast');
 		});

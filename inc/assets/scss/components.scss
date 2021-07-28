@@ -85,7 +85,7 @@
   display: block;
   position: relative;
   min-height:100px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   background: #F7F7FC;
   border:1px solid #ededff;
   color: $black;
@@ -154,6 +154,20 @@
     }
   }
 
+  .thumb-small {
+    position:relative;
+    @include mq('xl') {
+    width: 290px;
+    height: 35px;
+    padding-bottom: 38%;
+    }
+    display: block;
+    background-position: center center;
+    background-size: cover;
+    background-color: #cccccc;
+    background-repeat: no-repeat;
+  }
+
   .bottom-arrow {
     position: relative;
     bottom: 0px;
@@ -210,8 +224,27 @@
     }
   }
 
-
 }
+
+.profile-grid {
+
+  @include mq('xl') {
+  display: flex !important;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .content {
+     font-size: 15px;
+     font-weight: bold;
+     font-family: $heading1;
+  }
+}
+
+
+
 
 .section-cards-dark {
   .grid-card {
@@ -403,8 +436,18 @@ div {
 
 }
 
+
 // page
 // ---------------
+
+.inner-container .heading h2 {
+    padding-bottom: 5px;
+    font-size: 2.1rem;
+    margin-top: 20px;
+    border-top: 1px solid #e6e6f5;
+    padding-top: 30px;
+    width: 98%;
+}
 
 .content-divider { // used for grids udnerneath Page contents/sidebar
     margin-top: 60px;
@@ -413,8 +456,8 @@ div {
 .main-content {
   background-color: white;
   padding-top: 50px;
-  padding-left:  80px;
-  padding-right: 80px;
+  padding-left:  60px;
+  padding-right: 60px;
   min-height: 450px;
 
   @include mq('xg', 'max') {
