@@ -524,7 +524,7 @@ $result = new WP_Query($args);
 
 <div class="row grid-custom-top <?php if ( !get_sub_field('use_separator') ) : ?>no-separator<?php endif; ?>" style="clear:both;">
   <?php if ( get_sub_field('heading') ) : ?>
-    <div class="grid-heading col-12 col-md-3">
+    <div class="grid-heading col-12 <?php if ( get_sub_field('blurb_text') ) { ?>col-md-3<?php } ?>">
         <h3><?php the_sub_field('heading'); ?></h3>
     </div>
   <?php endif; ?>
