@@ -114,29 +114,21 @@
     );
 
   } elseif ( $main_post_type == 'events' ) {
-    $args = array(
-      'post_type'=> 'events',
-      'post_status' => 'publish',
-      'meta_key'  => 'event_date',
-      'orderby'   => 'meta_value_num',
-      'order'     => 'DESC',
-      'posts_per_page' => 3,
-    );
 
-  } elseif ( $main_post_type == 'events' ) {
+    $today = date('Ymd');
+
     $args = array(
       'post_type'=> 'events',
       'post_status' => 'publish',
-      'meta_key'  => 'event_date',
-      'orderby'   => 'meta_value_num',
       'order'     => 'DESC',
       'posts_per_page' => 3,
-      'tax_query' => array(
+      'meta_query' => array(
         array(
-          'taxonomy' => 'event_location',
-          'terms' => $what_to_show
+            'key'     => 'event_date',
+            'compare' => '>=',
+            'value'   => $today,
+          ),
         )
-      )
     );
 
   } else { // keep it standard
