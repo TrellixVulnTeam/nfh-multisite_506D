@@ -50,8 +50,12 @@ header#masthead {
     @include mq('xg', 'max') {
       text-align: left;
       font-size: 12px;
-
       a { padding: 2px 0px !important; }
+    }
+
+
+    @include mq('lg', 'max') {
+      font-size: 11px;
     }
 
     @include mq('md', 'max') {
@@ -70,8 +74,7 @@ header#masthead {
     @include mq('desktop-wide') {
       margin-right:-15px;
     }
-    @include mq('md') {
-      text-align: right;
+    @include mq('lg', 'max') {
     }
 
     @include mq('md', 'max') {
@@ -81,7 +84,7 @@ header#masthead {
 
     a {
       font-family: $heading1;
-      font-size: 13.5px;
+      font-size: 13px;
       text-decoration: none !important;
       background-color: #2A2A2A  !important;
       padding: 18px 50px 18px 40px  !important;
@@ -90,8 +93,12 @@ header#masthead {
        @include mq('xg', 'max') {
          font-size:12px !important;
          padding:10px 40px 10px 45px !important;
-
        }
+       @include mq('lg', 'max') {
+         font-size: 11px !important;
+         padding: 10px 20px 10px 25px !important;
+       }
+
       &:before {
         content: '\f124' !important;
         font-family: "Font Awesome 5 Pro" !important;
@@ -102,7 +109,9 @@ header#masthead {
         @include mq('xg', 'max') {
           top:10px;
         }
-
+        @include mq('lg', 'max') {
+          left: 7px;
+        }
         @include mq('xs', 'max') {
           top: 12px;
           left: 8px;
@@ -120,6 +129,9 @@ header#masthead {
         border:0;
         @include mq('xg', 'max') {
           top:10px;
+        }
+        @include mq('lg', 'max') {
+          right: 5px;
         }
       }
       &:hover {
@@ -292,7 +304,7 @@ header .header-desktop-menu {
     }
     .current_page_item a,
     .current-page-ancestor a {
-      border-bottom:10px solid $teal;
+      border-bottom:10px solid $bluen;
     }
 
 }
@@ -359,7 +371,7 @@ header .header-desktop-menu {
   #menu-toggle {
     @include hamburger($width: 40px, $thickness: 3px, $gap: 8px, $color: #333, $padding: 30px);
     &:hover {
-      @include hamburger_tint($teal);
+      @include hamburger_tint($bluen);
     }
   }
 
@@ -456,6 +468,9 @@ header .header-desktop-menu {
       margin-top: 27px;
       font-size: 30px;
       right: 48px;
+      &:hover, &:active, &:focus {
+        color: $purple;
+      }
     }
 
 }
@@ -545,7 +560,7 @@ a.search-result {
       font-family: $heading1;
       &:hover {
         color: white;
-        background: $purple;
+        background: $bluen;
       }
     }
   }

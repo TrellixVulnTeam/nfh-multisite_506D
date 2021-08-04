@@ -1491,6 +1491,11 @@ header#masthead {
     padding: 2px 0px !important;
   }
 }
+@media only screen and (max-width: 991px) {
+  .topbar--left {
+    font-size: 11px;
+  }
+}
 @media only screen and (max-width: 767px) {
   .topbar--left {
     display: none;
@@ -1509,11 +1514,6 @@ header#masthead {
     margin-right: -15px;
   }
 }
-@media only screen and (min-width: 768px) {
-  .topbar--right {
-    text-align: right;
-  }
-}
 @media only screen and (max-width: 767px) {
   .topbar--right {
     display: none;
@@ -1521,7 +1521,7 @@ header#masthead {
 }
 .topbar--right a {
   font-family: "intelo-bold", Helvetica, sans-serif;
-  font-size: 13.5px;
+  font-size: 13px;
   text-decoration: none !important;
   background-color: #2A2A2A !important;
   padding: 18px 50px 18px 40px !important;
@@ -1532,6 +1532,12 @@ header#masthead {
   .topbar--right a {
     font-size: 12px !important;
     padding: 10px 40px 10px 45px !important;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .topbar--right a {
+    font-size: 11px !important;
+    padding: 10px 20px 10px 25px !important;
   }
 }
 .topbar--right a:before {
@@ -1545,6 +1551,11 @@ header#masthead {
 @media only screen and (max-width: 1199px) {
   .topbar--right a:before {
     top: 10px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .topbar--right a:before {
+    left: 7px;
   }
 }
 @media only screen and (max-width: -1px) {
@@ -1566,6 +1577,11 @@ header#masthead {
 @media only screen and (max-width: 1199px) {
   .topbar--right a:after {
     top: 10px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .topbar--right a:after {
+    right: 5px;
   }
 }
 .topbar--right a:hover {

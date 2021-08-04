@@ -288,7 +288,7 @@ h2 {
   padding: 15px 10px;
 }
 .btn-share {
-  background: #20bfb4;
+  background: #05adef;
   color: white;
   padding: 15px 1px;
 }
@@ -314,7 +314,7 @@ h2 {
   color: #000000 !important;
 }
 .pagination a:hover, .pagination span.current:hover {
-  background: #20bfb4;
+  background: #05adef;
   color: white;
 }
 .pagination span.current {
@@ -641,7 +641,7 @@ div .grid-card-wrap:nth-child(4n+4) .grid-card .bottom-arrow {
 }
 #single-page-content #breadcrumbs, .single-page-content #breadcrumbs {
   background: black;
-  color: #20bfb4;
+  color: #05adef;
   font-family: "intelo-bold", Helvetica, sans-serif;
   padding: 20px 0px;
   border-radius: 0;
@@ -653,7 +653,7 @@ div .grid-card-wrap:nth-child(4n+4) .grid-card .bottom-arrow {
   }
 }
 #single-page-content #breadcrumbs a, .single-page-content #breadcrumbs a {
-  color: #20bfb4;
+  color: #05adef;
   text-decoration: none;
 }
 #single-page-content #breadcrumbs a:hover, .single-page-content #breadcrumbs a:hover {
@@ -712,7 +712,7 @@ div .grid-card-wrap:nth-child(4n+4) .grid-card .bottom-arrow {
   padding-bottom: 40px;
 }
 .inner-container a {
-  color: #5d4ac6;
+  color: #05adef;
   text-decoration: underline;
   font-weight: bold;
 }
@@ -761,7 +761,7 @@ div .grid-card-wrap:nth-child(4n+4) .grid-card .bottom-arrow {
 }
 .inner-container ul.accordions .accordion-title:before {
   border-radius: 100%;
-  background: #20bfb4;
+  background: #05adef;
   color: white;
   font-family: inherit;
   display: inline-block;
@@ -1393,7 +1393,7 @@ h2.filter-head {
   color: #474747 !important;
 }
 .inner-container ul#the_alphabet_links li:hover {
-  background: #20bfb4;
+  background: #05adef;
   color: #000000;
 }
 .inner-container .letter_group_wrapper h4 {
@@ -1491,6 +1491,11 @@ header#masthead {
     padding: 2px 0px !important;
   }
 }
+@media only screen and (max-width: 991px) {
+  .topbar--left {
+    font-size: 11px;
+  }
+}
 @media only screen and (max-width: 767px) {
   .topbar--left {
     display: none;
@@ -1509,11 +1514,6 @@ header#masthead {
     margin-right: -15px;
   }
 }
-@media only screen and (min-width: 768px) {
-  .topbar--right {
-    text-align: right;
-  }
-}
 @media only screen and (max-width: 767px) {
   .topbar--right {
     display: none;
@@ -1521,7 +1521,7 @@ header#masthead {
 }
 .topbar--right a {
   font-family: "intelo-bold", Helvetica, sans-serif;
-  font-size: 13.5px;
+  font-size: 13px;
   text-decoration: none !important;
   background-color: #2A2A2A !important;
   padding: 18px 50px 18px 40px !important;
@@ -1532,6 +1532,12 @@ header#masthead {
   .topbar--right a {
     font-size: 12px !important;
     padding: 10px 40px 10px 45px !important;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .topbar--right a {
+    font-size: 11px !important;
+    padding: 10px 20px 10px 25px !important;
   }
 }
 .topbar--right a:before {
@@ -1545,6 +1551,11 @@ header#masthead {
 @media only screen and (max-width: 1199px) {
   .topbar--right a:before {
     top: 10px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .topbar--right a:before {
+    left: 7px;
   }
 }
 @media only screen and (max-width: -1px) {
@@ -1566,6 +1577,11 @@ header#masthead {
 @media only screen and (max-width: 1199px) {
   .topbar--right a:after {
     top: 10px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .topbar--right a:after {
+    right: 5px;
   }
 }
 .topbar--right a:hover {
@@ -1625,7 +1641,7 @@ header#masthead {
   width: auto;
 }
 .topbar .menu-quicklinks .dropdown-menu li.highlight a {
-  background: #20bfb4 !important;
+  background: #05adef !important;
 }
 .topbar .menu-quicklinks .dropdown-menu a {
   border-bottom: 1px solid #eeee;
@@ -1727,7 +1743,7 @@ header .header-desktop-menu li a {
   border-bottom: 10px solid white;
 }
 header .header-desktop-menu li a:hover {
-  border-bottom: 10px solid #20bfb4;
+  border-bottom: 10px solid #05adef;
 }
 @media only screen and (max-width: 1439px) {
   header .header-desktop-menu li a {
@@ -1737,7 +1753,7 @@ header .header-desktop-menu li a:hover {
 }
 header .header-desktop-menu .current_page_item a,
 header .header-desktop-menu .current-page-ancestor a {
-  border-bottom: 10px solid #20bfb4;
+  border-bottom: 10px solid #05adef;
 }
 
 #search-btn {
@@ -1747,7 +1763,7 @@ header .header-desktop-menu .current-page-ancestor a {
   justify-content: center;
   height: 100%;
   font-size: 24px;
-  background: #20bfb4;
+  background: #05adef;
   color: white;
   cursor: pointer;
   text-decoration: none;
@@ -1945,7 +1961,7 @@ header .header-desktop-menu .current-page-ancestor a {
   background-color: #333;
 }
 .mobile-btn-contain #menu-toggle:hover + label i, .mobile-btn-contain #menu-toggle:hover + label::before, .mobile-btn-contain #menu-toggle:hover + label::after {
-  background-color: #20bfb4;
+  background-color: #05adef;
 }
 .mobile-btn-contain #menu-toggle + label {
   z-index: 100 !important;
@@ -1988,7 +2004,7 @@ header .header-desktop-menu .current-page-ancestor a {
   right: -15px;
   font-size: 18px;
   color: white;
-  background: #20bfb4;
+  background: #05adef;
   padding: 15px 20px;
   cursor: pointer;
   opacity: 1;
@@ -2031,6 +2047,9 @@ header .header-desktop-menu .current-page-ancestor a {
   margin-top: 27px;
   font-size: 30px;
   right: 48px;
+}
+#search-modal button:hover, #search-modal button:active, #search-modal button:focus {
+  color: #5d4ac6;
 }
 
 input.search-field {
@@ -2086,7 +2105,7 @@ a.search-result:hover h2 {
   top: 10px;
   right: 10px;
   font-size: 40px;
-  color: #20bfb4;
+  color: #05adef;
   width: 100px;
   height: 100px;
   cursor: pointer;
@@ -2115,7 +2134,7 @@ a.search-result:hover h2 {
 }
 #mobile-menu ul.mobile-menu li a:hover {
   color: white;
-  background: #5d4ac6;
+  background: #05adef;
 }
 
 div#page {
@@ -2369,7 +2388,7 @@ footer .footer--credits a, .footerbg .footer--credits a {
   }
 }
 .sidebar ul.boxed li a:hover {
-  background: #20bfb4;
+  background: #05adef;
   color: white;
 }
 .sidebar ul.boxed li a:hover::before {
@@ -2377,7 +2396,7 @@ footer .footer--credits a, .footerbg .footer--credits a {
 }
 .sidebar ul.boxed li.current_page_item a {
   text-decoration: none !important;
-  background-color: #20bfb4 !important;
+  background-color: #05adef !important;
   color: white;
 }
 .sidebar ul.boxed li.current_page_item a:before {

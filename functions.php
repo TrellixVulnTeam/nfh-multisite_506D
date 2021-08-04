@@ -468,10 +468,15 @@ function the_breadcrumb() {
     }
 }
 
+// ---------------------
+// custom OG image tags
 
-
-
-
+add_action('wp_head', 'og_custom_meta');
+function og_custom_meta(){
+    //if( is_front_page() ) { // 																	'. get_the_post_thumbnail_url(get_the_ID(),'full')   .'
+        echo '<meta property="og:image" content="' . get_template_directory_uri() . '/inc/assets/img/og-img.jpg" />';
+    //}
+}
 
 
 // -----------------------------------------------------------
