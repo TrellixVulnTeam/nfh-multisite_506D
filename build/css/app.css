@@ -1476,6 +1476,21 @@ header#masthead {
     padding-left: 35px;
   }
 }
+@media only screen and (max-width: 1439px) {
+  .topbar--left a {
+    font-size: 12.5px;
+  }
+}
+@media only screen and (max-width: 1349px) {
+  .topbar--left a {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .topbar--left a {
+    font-size: 11px;
+  }
+}
 @media only screen and (min-width: 1200px) {
   .topbar--left {
     font-size: 13px;
@@ -1531,7 +1546,17 @@ header#masthead {
 @media only screen and (max-width: 1199px) {
   .topbar--right a {
     font-size: 12px !important;
-    padding: 10px 40px 10px 45px !important;
+    padding: 18px 40px 18px 45px !important;
+  }
+}
+@media only screen and (max-width: 1349px) {
+  .topbar--right a {
+    padding: 18px 30px 18px 35px !important;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .topbar--right a {
+    padding: 10px 30px 10px 35px !important;
   }
 }
 @media only screen and (max-width: 991px) {
@@ -1551,6 +1576,11 @@ header#masthead {
 @media only screen and (max-width: 1199px) {
   .topbar--right a:before {
     top: 10px;
+  }
+}
+@media only screen and (max-width: 1349px) {
+  .topbar--right a:before {
+    left: 10px;
   }
 }
 @media only screen and (max-width: 991px) {
@@ -1579,6 +1609,11 @@ header#masthead {
     top: 10px;
   }
 }
+@media only screen and (max-width: 1349px) {
+  .topbar--right a:after {
+    right: 8px;
+  }
+}
 @media only screen and (max-width: 991px) {
   .topbar--right a:after {
     right: 5px;
@@ -1592,6 +1627,18 @@ header#masthead {
   background-color: black !important;
   padding: 18px 20px !important;
 }
+@media only screen and (max-width: 1439px) {
+  .topbar--right a.sub {
+    padding: 18px 12px !important;
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 1349px) {
+  .topbar--right a.sub {
+    padding: 18px 10px !important;
+    font-size: 11px;
+  }
+}
 .topbar--right a.sub:before {
   display: none;
 }
@@ -1604,7 +1651,7 @@ header#masthead {
 }
 .topbar a {
   color: white;
-  text-decoration: underline;
+  text-decoration: inherit;
   display: inline-block;
   padding: 2px 10px;
 }
@@ -1654,6 +1701,12 @@ header#masthead {
 }
 .topbar .menu-quicklinks .dropdown-menu a:after {
   display: none;
+}
+
+@media only screen and (max-width: 1199px) {
+  .custom-links-desktop {
+    display: none !important;
+  }
 }
 
 .topbar--title {

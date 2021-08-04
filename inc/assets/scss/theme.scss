@@ -42,6 +42,22 @@ header#masthead {
         padding-left:35px;
     }
 
+    @include mq('xl', 'max') {
+      a {
+        font-size: 12.5px;
+      }
+    }
+    @include mq('xv', 'max') {
+      a {
+        font-size: 12px;
+      }
+    }
+    @include mq('xg', 'max') {
+      a {
+        font-size: 11px;
+      }
+    }
+
     @include mq('xg') {
       font-size:13px;
       padding-left: 7px;
@@ -92,7 +108,13 @@ header#masthead {
       position: relative;
        @include mq('xg', 'max') {
          font-size:12px !important;
-         padding:10px 40px 10px 45px !important;
+         padding:18px 40px 18px 45px !important;
+       }
+       @include mq('xv', 'max') {
+         padding: 18px 30px 18px 35px !important;
+       }
+       @include mq('xg', 'max') {
+         padding: 10px 30px 10px 35px !important;
        }
        @include mq('lg', 'max') {
          font-size: 11px !important;
@@ -108,6 +130,9 @@ header#masthead {
         top: 17px;
         @include mq('xg', 'max') {
           top:10px;
+        }
+        @include mq('xv', 'max') {
+          left: 10px;
         }
         @include mq('lg', 'max') {
           left: 7px;
@@ -130,6 +155,9 @@ header#masthead {
         @include mq('xg', 'max') {
           top:10px;
         }
+        @include mq('xv', 'max') {
+          right: 8px;
+        }
         @include mq('lg', 'max') {
           right: 5px;
         }
@@ -141,10 +169,18 @@ header#masthead {
     }
 
     a.sub {
-      &:before { display: none; }
-      &:after { display: none; }
       background-color: black !important;
       padding: 18px 20px !important;
+      @include mq('xl', 'max') {
+        padding: 18px 12px !important;
+        font-size:12px;
+      }
+      @include mq('xv', 'max') {
+        padding: 18px 10px !important;
+        font-size:11px;
+      }
+      &:before { display: none; }
+      &:after { display: none; }
       &:hover {
         text-decoration: underline;
         background: $purple !important;
@@ -156,7 +192,7 @@ header#masthead {
 
   a {
     color: white;
-    text-decoration: underline;
+    text-decoration: inherit;
     display: inline-block;
     padding:2px 10px;
 
@@ -218,6 +254,12 @@ header#masthead {
 
   }
 
+}
+
+.custom-links-desktop {
+    @include mq('xg', 'max') {
+      display: none !important;
+    }
 }
 
 .topbar--title  {  display: inline-block;  }

@@ -72,7 +72,7 @@
       .news_background { color: <?php echo $news_background; ?>; }
       .news_background_active { color: <?php echo $news_background_active; ?>; }
 
-      footer .footer-lower .footer--social a:hover, .footerbg .footer-lower .footer--social a:hover { background: transparent; } .home_banner_background { background-image: url('<?php echo $home_banner_background['url']; ?>') !important; } .page_top_background { background-image: url('<?php echo $page_top_background['url']; ?>') !important; } .page_bottom_background { background-image: url('<?php echo $page_bottom_background['url']; ?>') !important; } header .header-desktop-menu .current_page_item a, header .header-desktop-menu .current-page-ancestor a, header .header-desktop-menu li a:hover { border-bottom: 10px solid<?php echo $header_menu_link_accent; ?>; } #search-btn, #search-modal .close { background:<?php echo $search_button; ?>; } .btn.black:hover { background-color:<?php echo $secondary_accent_colour; ?>; } .topbar .menu-quicklinks .dropdown-menu li.highlight a { background:<?php echo $search_button; ?>!important; color: white !important; } .topbar .menu-quicklinks .dropdown-menu li.highlight a:hover { background: black !important; } #section--home-tabbed { background-color:<?php echo $news_background; ?>; } .section--home-tabbed-content, .section--home-tabbed .nav-link.active { background-color:<?php echo $news_background_active; ?>; } .topbar--right a.sub:hover, .topbar .dropdown-menu a:hover, .topbar a:hover { background-color:<?php echo $header_menu_link_accent; ?>!important; } .topbar .menu-quicklinks a:hover { background-color:<?php echo $header_menu_link_accent; ?>!important; } div .grid-card-wrap:nth-child(4n+1) .grid-card .bottom-arrow { background:<?php echo $item_color_1; ?>!important; } div .grid-card-wrap:nth-child(4n+2) .grid-card .bottom-arrow { background:<?php echo $item_color_2; ?>!important; } div .grid-card-wrap:nth-child(4n+3) .grid-card .bottom-arrow { background:<?php echo $item_color_3; ?>!important; } div .grid-card-wrap:nth-child(4n+4) .grid-card .bottom-arrow { background:<?php echo $item_color_4; ?>!important; } .section-events .title, .profile-grid .content { color:<?php echo $secondary_accent_colour; ?>; } .section-events .bottom-arrow, .section-events .btn-link a:hover { background-color:<?php echo $secondary_accent_colour; ?>!important; } footer, .footerbg { background-color:<?php echo $footer_background_colour; ?>; } #single-page-content #breadcrumbs a, .single-page-content #breadcrumbs a, #single-page-content #breadcrumbs, .single-page-content #breadcrumbs { color: white; } .sidebar h3, .sidebar.related-depts ul.boxed li a, .inner-container ul.service_listings i, .sidebar.related-depts ul.boxed li a:before, .sidebar--recent ul.boxed li a:before, h2.filter-head { color:<?php echo $secondary_accent_colour; ?>; } .btn-print { } .sidebar ul.boxed li a:hover, .inner-container ul.accordions .accordion-title:before, .btn-share, .inner-container ul#the_alphabet_links li:hover { background-color:<?php echo $main_accent_colour; ?>; } .btn-print { background-color:<?php echo $footer_background_colour; ?>; }
+      footer .footer-lower .footer--social a:hover, .footerbg .footer-lower .footer--social a:hover { background: transparent; } .home_banner_background { background-image: url('<?php echo $home_banner_background['url']; ?>') !important; } .page_top_background { background-image: url('<?php echo $page_top_background['url']; ?>') !important; } .page_bottom_background { background-image: url('<?php echo $page_bottom_background['url']; ?>') !important; } header .header-desktop-menu .current_page_item a, header .header-desktop-menu .current-page-ancestor a, header .header-desktop-menu li a:hover { border-bottom: 10px solid<?php echo $header_menu_link_accent; ?>; } #search-btn, #search-modal .close { background:<?php echo $search_button; ?>; } .btn.black:hover { background-color:<?php echo $secondary_accent_colour; ?>; } .topbar .menu-quicklinks .dropdown-menu li.highlight a { background:<?php echo $search_button; ?>!important; color: white !important; } .topbar .menu-quicklinks .dropdown-menu li.highlight a:hover { background: black !important; } #section--home-tabbed { background-color:<?php echo $news_background; ?>; } .section--home-tabbed-content, .section--home-tabbed .nav-link.active { background-color:<?php echo $news_background_active; ?>; } .topbar--right a.sub:hover, .topbar .dropdown-menu a:hover, .topbar .menu-quicklinks a:hover { background-color:<?php echo $header_menu_link_accent; ?>!important; } div .grid-card-wrap:nth-child(4n+1) .grid-card .bottom-arrow { background:<?php echo $item_color_1; ?>!important; } div .grid-card-wrap:nth-child(4n+2) .grid-card .bottom-arrow { background:<?php echo $item_color_2; ?>!important; } div .grid-card-wrap:nth-child(4n+3) .grid-card .bottom-arrow { background:<?php echo $item_color_3; ?>!important; } div .grid-card-wrap:nth-child(4n+4) .grid-card .bottom-arrow { background:<?php echo $item_color_4; ?>!important; } .section-events .title, .profile-grid .content { color:<?php echo $secondary_accent_colour; ?>; } .section-events .bottom-arrow, .section-events .btn-link a:hover { background-color:<?php echo $secondary_accent_colour; ?>!important; } footer, .footerbg { background-color:<?php echo $footer_background_colour; ?>; } #single-page-content #breadcrumbs a, .single-page-content #breadcrumbs a, #single-page-content #breadcrumbs, .single-page-content #breadcrumbs { color: white; } .sidebar h3, .sidebar.related-depts ul.boxed li a, .inner-container ul.service_listings i, .sidebar.related-depts ul.boxed li a:before, .sidebar--recent ul.boxed li a:before, h2.filter-head { color:<?php echo $secondary_accent_colour; ?>; } .btn-print { } .sidebar ul.boxed li a:hover, .inner-container ul.accordions .accordion-title:before, .btn-share, .inner-container ul#the_alphabet_links li:hover { background-color:<?php echo $main_accent_colour; ?>; } .btn-print { background-color:<?php echo $footer_background_colour; ?>; }
 
 
     </style>
@@ -105,22 +105,32 @@
   <header id="subhead" class="subhead subheader topbar body" role="navigation" >
     <div class="container-fluid no-gutters" style="padding-right:0;">
       <div class="row justify-content-between align-items-center">
-         <div class="col-12 col-md-4 topbar--left">
+         <div class="col-12 col-md-6 col-lg-4 topbar--left">
             <?php if (get_field('show_text_label', 'options')) { ?>
               <?php the_field('topbar_textlabel', 'options'); ?>
             <?php } ?>
+
             <?php if (get_field('show_link_label', 'options')) { ?>
               <span class="second">
                 <?php $topleftlink = get_field('topbar_linkurl', 'options'); ?>
                 <a target="_blank" href="<?php echo $topleftlink['url']; ?>"><?php the_field('topbar_linklabel', 'options'); ?></a>
               </span>
             <?php } ?>
+
+            <?php if (get_field('show_link_label_2', 'options')) { ?>
+              <span class="head-divider"> • </span>
+              <span class="third">
+                <?php $topleftlink2 = get_field('topbar_linkurl_2', 'options'); ?>
+                <a target="_blank" href="<?php echo $topleftlink2['url']; ?>"><?php the_field('topbar_linklabel_2', 'options'); ?></a>
+              </span>
+            <?php } ?>
          </div>
-         <div class="col-12 col-md-8 topbar--right font-alt">
+
+         <div class="col-12 col-md-6 col-lg-8 topbar--right font-alt">
 
          <?php if ( get_field('show_custom_links', 'options') ): ?>
            <?php if( have_rows('custom_links', 'options') ): ?>
-            <div class="topbar--title">
+            <div class="topbar--title custom-links-desktop">
             <?php while( have_rows('custom_links', 'options') ): the_row();
                 $toplink = get_sub_field('link');
                 ?>
@@ -226,6 +236,23 @@
         'depth'           => 3,
         ));
         ?>
+
+        <?php if ( get_field('show_custom_links', 'options') ): ?>
+          <?php if( have_rows('custom_links', 'options') ): ?>
+           <ul class="mobile-menu custom-links--mobile">
+           <?php while( have_rows('custom_links', 'options') ): the_row();
+               $toplink = get_sub_field('link');
+               ?>
+               <li>
+                 <a class="sub" href="<?php echo get_the_permalink($toplink->ID) ?>">
+                     <?php echo $toplink->post_title; ?>
+                 </a>
+              </li>
+           <?php endwhile; ?>
+         </ul>
+         <?php endif; ?>
+       <?php endif; ?>
+
     </div>
   </nav>
 
