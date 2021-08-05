@@ -3,6 +3,7 @@
 
 html, body {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 a.skip-link.screen-reader-text { display: none; }
