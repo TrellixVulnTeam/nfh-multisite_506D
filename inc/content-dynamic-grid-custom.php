@@ -166,7 +166,7 @@
         'meta_query' => array(
           array(
               'key'     => 'event_date',
-              'compare' => '>=',
+              'compare' => '>',
               'value'   => $today,
             ),
           )
@@ -179,7 +179,7 @@
         'meta_query' => array(
           array(
               'key'     => 'event_date',
-              'compare' => '<=',
+              'compare' => '<',
               'value'   => $today,
             ),
           )
