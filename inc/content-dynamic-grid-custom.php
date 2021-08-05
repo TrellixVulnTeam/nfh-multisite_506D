@@ -15,6 +15,7 @@
       //  check what post type chosen to show
 
     $main_post_type = get_sub_field('grid_which_posts');    // grab main post type
+
     $posts_per_row = get_sub_field('grid_how_many'); // 3 or 4
 
     if ( get_sub_field('grid_which_posts') == 'news' ):
@@ -31,6 +32,9 @@
 
     elseif ( get_sub_field('grid_which_posts') == 'microsites' ):
       $what_to_show = 'microsites';
+
+    elseif ( get_sub_field('grid_which_posts') == 'profiles' ):
+        $what_to_show = get_sub_field('filter_profiles_items');
 
     endif;
 
@@ -277,6 +281,11 @@
       )
     );
 
+  } elseif ( ($main_post_type == 'profiles') ) {
+
+
+
+
   } elseif ( ($main_post_type == 'bulletins') && (!$what_to_show) ) {
    $args = array(
      'post_type'=> 'bulletins',
@@ -285,15 +294,6 @@
      'orderby' => 'date',
      'order'   => 'DESC',
      'paged' => $paged ,
-     /*'tax_query' => array(
-                     array(
-                         'taxonomy' => 'bulletin_category',
-                         'field' => 'slug',
-                         'terms' => 'nursing-midwifery',
-                         'include_children' => true,
-                         'operator' => 'NOT IN'
-                       )
-                    ),*/
    );
 
  } elseif ( ($main_post_type == 'bulletins') && ($what_to_show) ) {
@@ -596,15 +596,11 @@ $result = new WP_Query($args);
 
 
 <?php if ( $main_post_type == 'microsites' ) {
-
   //
   // This section was added as a new request, after the main development.
   //
-
   ?>
-
 <div class="section-microsites row grid-custom grid-custom-<?php echo $main_post_type; ?>" style="background:transparent;">
-
 <?php
 
   $terms = get_terms([
@@ -639,8 +635,83 @@ $result = new WP_Query($args);
   <?php } ?>
 
 </div>
-
 <?php } ?>
 
+
+<?php if ( $main_post_type == 'profiles' ) {
+  //
+  // This section was added as a new request, after the main development.
+  //
+  // 1
+
+  $dept_list = get_categories('taxonomy=department&type=profiles');
+
+  foreach ($dept_list as $dept_item) {
+    wp_reset_query();
+    echo '<a class="btn std" href="#dept-'. $dept_item->slug .'">'. $dept_item->name  .'</a> &nbsp; ';
+  }
+
+  echo '<hr/ style="margin-top:20px;">';
+
+  // 2
+
+  $custom_terms = get_terms('department');
+
+  foreach($custom_terms as $custom_term) {
+
+      wp_reset_query();
+
+      $args = array('post_type' => 'profiles',
+          'tax_query' => array(
+              array(
+                  'taxonomy' => 'department',
+                  'field' => 'slug',
+                  'terms' => $custom_term->slug,
+              ),
+          ),
+       );
+
+       $loop = new WP_Query($args);
+       if( $loop->have_posts() ) {
+
+          echo '<h2 style="padding:30px 0;" id="dept-'. $custom_term->slug .'">'.$custom_term->name.'</h2>';
+          echo '<div class="row no-gutters">';
+
+          while($loop->have_posts()) : $loop->the_post();
+          $featured_img_url1 = get_the_post_thumbnail_url(get_the_ID(),'medium');
+          ?>
+
+          <?php if ( $posts_per_row == '3' ) { ?>
+            <div class="grid-card-wrap col-12 col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
+
+              <a href="<?php the_permalink(); ?>" class="profile-grid-item grid-card row no-gutters" style="display:flex; margin-bottom:20px; min-height:150px;">
+                <div class="col-12 col-xs-12 col-sm-4" style="background-image:url('<?php echo $featured_img_url1; ?>');background-size:cover;background-position:center center;">
+                  &nbsp;
+                </div>
+                <div class="col-12 col-xs-12 col-sm-8" style="padding:20px;">
+                  <h5><?php the_title(); ?></h5>
+                  <div class="secondary_accent_colour heading1" style="font-size:13px;">
+                    <?php the_field('excerpt'); ?>
+                  </div>
+                </div>
+              </a>
+
+            </div>
+          <?php } elseif ( $posts_per_row == '4' ) { ?>
+            <div class="grid-card-wrap col-12 col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
+            <?php the_title(); ?>
+            </div>
+          <?php } ?>
+
+          <?
+          endwhile;
+
+          echo '</div>';
+       }
+   }
+   wp_reset_query();
+?>
+
+<?php } ?>
 
 <?php wp_reset_postdata(); ?>

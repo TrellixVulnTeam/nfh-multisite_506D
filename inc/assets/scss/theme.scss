@@ -103,7 +103,7 @@ header#masthead {
       font-size: 13px;
       text-decoration: none !important;
       background-color: #2A2A2A  !important;
-      padding: 18px 50px 18px 40px  !important;
+      padding: 18px 38px 18px 37px  !important;
       display: inline-block  !important;
       position: relative;
        @include mq('xg', 'max') {
@@ -126,7 +126,7 @@ header#masthead {
         font-family: "Font Awesome 5 Pro" !important;
         display: block;
         position: absolute;
-        left: 19px;
+        left: 14px;
         top: 17px;
         @include mq('xg', 'max') {
           top:10px;
@@ -149,7 +149,7 @@ header#masthead {
         font-family: "Font Awesome 5 Pro" !important;
         display: block;
         position: absolute;
-        right: 20px;
+        right: 16px;
         top: 17px;
         border:0;
         @include mq('xg', 'max') {

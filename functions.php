@@ -397,7 +397,10 @@ function the_breadcrumb() {
 					}
 
 					if ( get_post_type( get_the_ID() ) == 'profiles' ) {
+						$terms1 = get_the_terms( $post->ID, 'department' );
 						echo '<a href="'.site_url().'/nursing-midwifery-profiles/">Nursing & Midwifery Profiles</a>';
+						echo $sep;
+						echo '<a href="'. site_url() .'/nursing-midwifery-profiles/#dept-'. $terms1[0]->slug .'">' . $terms1[0]->name . '</a>';
 					}
 
 					if ( get_post_type( get_the_ID() ) == 'events' ) {
@@ -474,9 +477,19 @@ function the_breadcrumb() {
 add_action('wp_head', 'og_custom_meta');
 function og_custom_meta(){
     //if( is_front_page() ) { // 																	'. get_the_post_thumbnail_url(get_the_ID(),'full')   .'
-        echo '<meta property="og:image" content="' . get_template_directory_uri() . '/inc/assets/img/og-img.jpg" />';
+			global $post;
+			echo '<meta property="og:image" content="' . get_template_directory_uri() . '/inc/assets/img/og-img.jpg" />';
+
+			//echo '<meta name="' .   . '"/>'
     //}
 }
+
+
+add_filter( 'Yoast\WP\ACF\blacklist_name', function ( $blacklist_name ) {
+    $blacklist_name->add( the_content() );
+    return $blacklist_name;
+});
+
 
 
 // -----------------------------------------------------------

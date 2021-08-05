@@ -73,7 +73,7 @@
 
 
                        } else {
-                         echo 'No excerpt';
+                         echo '';
                          //echo strip_tags(get_the_content());
                        }
                      ?>

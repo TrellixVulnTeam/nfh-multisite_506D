@@ -24,10 +24,10 @@
 		// --------------------
 		// uniform card heights
 				var maxHeight = 0;
-				$(".grid-card .inner-wrap").each(function(){
+				$(".grid-card .inner-wrap, .profile-grid-item").each(function(){
 				   if ($(this).height() > maxHeight) { maxHeight = $(this).height(); }
 				});
-				$(".grid-card .inner-wrap").height(maxHeight);
+				$(".grid-card .inner-wrap, .profile-grid-item").height(maxHeight);
 
 
 		// ---------------------

@@ -226,6 +226,12 @@
 
 }
 
+.profile-grid-item, a.profile-grid-item  {
+  text-decoration: none !important;
+  color: inherit !important;
+
+}
+
 .profile-grid {
 
   @include mq('xl') {

@@ -57,6 +57,7 @@
     <?php wp_head(); ?>
     <style type="text/css">
 
+      .heading1 { font-family: 'intelo-bold', Helvetica, sans-serif; }
       .header_menu_link_accent { color: <?php echo $header_menu_link_accent ;?>; }
       .search_button { color: <?php echo $search_button; ;?> }
       .footer_background_colour { color: <?php echo $footer_background_colour ;?>; }
@@ -105,7 +106,7 @@
   <header id="subhead" class="subhead subheader topbar body" role="navigation" >
     <div class="container-fluid no-gutters" style="padding-right:0;">
       <div class="row justify-content-between align-items-center">
-         <div class="col-12 col-md-6 col-lg-4 topbar--left">
+         <div class="col-12 col-md-6 col-lg col-xl-4 topbar--left">
             <?php if (get_field('show_text_label', 'options')) { ?>
               <?php the_field('topbar_textlabel', 'options'); ?>
             <?php } ?>
@@ -126,7 +127,7 @@
             <?php } ?>
          </div>
 
-         <div class="col-12 col-md-6 col-lg-8 topbar--right font-alt">
+         <div class="col-12 col-md-6 col-lg col-xl-8 topbar--right font-alt">
 
          <?php if ( get_field('show_custom_links', 'options') ): ?>
            <?php if( have_rows('custom_links', 'options') ): ?>
