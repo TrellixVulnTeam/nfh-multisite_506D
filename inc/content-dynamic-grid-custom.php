@@ -685,10 +685,10 @@ $result = new WP_Query($args);
             <div class="grid-card-wrap col-12 col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
 
               <a href="<?php the_permalink(); ?>" class="profile-grid-item grid-card row no-gutters" style="display:flex; margin-bottom:20px; min-height:150px;">
-                <div class="col-12 col-xs-12 col-sm-4" style="background-image:url('<?php echo $featured_img_url1; ?>');background-size:cover;background-position:center center;">
+                <div class="col-4" style="background-image:url('<?php echo $featured_img_url1; ?>');background-size:cover;background-position:center center;">
                   &nbsp;
                 </div>
-                <div class="col-12 col-xs-12 col-sm-8" style="padding:20px;">
+                <div class="col-8" style="padding:20px;">
                   <h5><?php the_title(); ?></h5>
                   <div class="secondary_accent_colour heading1" style="font-size:13px;">
                     <?php the_field('excerpt'); ?>
@@ -699,7 +699,19 @@ $result = new WP_Query($args);
             </div>
           <?php } elseif ( $posts_per_row == '4' ) { ?>
             <div class="grid-card-wrap col-12 col-xs-12 col-sm-6 col-md-6 col-lg-3 col-xl-3">
-            <?php the_title(); ?>
+
+              <a href="<?php the_permalink(); ?>" class="profile-grid-item grid-card row no-gutters" style="display:flex; margin-bottom:20px; min-height:150px;">
+                <div class="col-4" style="background-image:url('<?php echo $featured_img_url1; ?>');background-size:cover;background-position:center center;">
+                  &nbsp;
+                </div>
+                <div class="col-8" style="padding:20px;">
+                  <h5><?php the_title(); ?></h5>
+                  <div class="secondary_accent_colour heading1" style="font-size:13px;">
+                    <?php the_field('excerpt'); ?>
+                  </div>
+                </div>
+              </a>
+
             </div>
           <?php } ?>
 
