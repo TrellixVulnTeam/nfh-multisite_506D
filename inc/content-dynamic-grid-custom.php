@@ -667,6 +667,7 @@ $result = new WP_Query($args);
                   'taxonomy' => 'department',
                   'field' => 'slug',
                   'terms' => $custom_term->slug,
+                  'posts_per_page' => 999,
               ),
           ),
        );
