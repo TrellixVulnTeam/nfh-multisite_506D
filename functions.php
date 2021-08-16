@@ -398,9 +398,9 @@ function the_breadcrumb() {
 
 					if ( get_post_type( get_the_ID() ) == 'profiles' ) {
 						$terms1 = get_the_terms( $post->ID, 'department' );
-						echo '<a href="'.site_url().'/nursing-midwifery-profiles/">Nursing & Midwifery Profiles</a>';
+						echo '<a href="'.site_url().'/nursing-midwifery-profile/">Nursing & Midwifery Profiles</a>';
 						echo $sep;
-						echo '<a href="'. site_url() .'/nursing-midwifery-profiles/#dept-'. $terms1[0]->slug .'">' . $terms1[0]->name . '</a>';
+						echo '<a href="'. site_url() .'/nursing-midwifery-profile#dept-'. $terms1[0]->slug .'">' . $terms1[0]->name . '</a>';
 					}
 
 					if ( get_post_type( get_the_ID() ) == 'events' ) {
