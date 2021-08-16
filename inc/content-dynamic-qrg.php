@@ -431,7 +431,7 @@
        setTimeout(function(){
        $('.letter_group_wrapper').each(function(){
          let the_letter = $(this).attr('letter');
-         let the_number_of_services_visible = $(this).children('ul').children('li[state="visible"]').length;
+         let the_number_of_services_visible = $(this).children('ul').children('a').children('li:visible').length;
          if(the_number_of_services_visible == 0){
            $(this).hide();
          }
