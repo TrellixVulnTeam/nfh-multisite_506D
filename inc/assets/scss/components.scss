@@ -354,7 +354,7 @@ div {
 
     @include mq('sm', 'max') {
       padding-left: 10px;
-      line-height: 35px;
+      line-height: 35px; 
       font-size: 35px;
     }
 
@@ -373,7 +373,7 @@ div {
 #single-page-content, .single-page-content {
   background: $sidebarbg;
   margin-left:50px;
-  font-size: 17px; // main Content font size
+  font-size: 16px; // main Content font size
   box-shadow: -5px 5px 22px rgb(0 0 0 / 10%);
   -webkit-box-shadow: -5px 5px 22px rgb(0 0 0 / 10%);
   @include mq('xxl') {

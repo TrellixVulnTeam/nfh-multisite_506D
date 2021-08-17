@@ -396,9 +396,20 @@
         $('.qrg-item-listing').each(function(){
           var itemlisting = $(this).text().toLowerCase();
           $(this).toggle(itemlisting.indexOf(searchterm) !== -1);
-         // $(this).parents('.letter_group_wrapper').toggle(itemlisting.indexOf(searchterm) !== -1);
+          //$(this).parents('.letter_group_wrapper').toggle(itemlisting.indexOf(searchterm) !== -1);
          // $('.letter_group_wrapper').hide();
-         // $(this).parent().parent().parent().show();
+          //$(this).parent().parent().parent().show();
+          // IF LETTER GROUPS ARE NOW EMPTY
+
+          $('.letter_group_wrapper').each(function(){
+            let the_letter = $(this).attr('letter');
+            let the_number_of_services_visible = $(this).children('ul').children('a').children('li:visible').length;
+            if(the_number_of_services_visible == 0){
+              $(this).hide();
+            }
+          });
+
+
         });
       }
 
@@ -436,7 +447,8 @@
            $(this).hide();
          }
        });
-       }, 1);
+
+      }, 1);
      });
 
    }); // close DOCUMENT.READY

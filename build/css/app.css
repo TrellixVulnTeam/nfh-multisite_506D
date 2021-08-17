@@ -628,7 +628,7 @@ div .grid-card-wrap:nth-child(4n+4) .grid-card .bottom-arrow {
 #single-page-content, .single-page-content {
   background: #f7f7fc;
   margin-left: 50px;
-  font-size: 17px;
+  font-size: 16px;
   box-shadow: -5px 5px 22px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: -5px 5px 22px rgba(0, 0, 0, 0.1);
 }

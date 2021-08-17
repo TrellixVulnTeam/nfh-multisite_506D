@@ -113,19 +113,20 @@
       )
     );
 
-  } elseif ( $main_post_type == 'events' ) {
+  } elseif ( $main_post_type == 'events' ) { // show ONLY future dated events
 
     $today = date('Ymd');
 
     $args = array(
       'post_type'=> 'events',
       'post_status' => 'publish',
-      'order'     => 'DESC',
+      'orderby'   => 'meta_value_num',
+      'order' => 'ASC',
       'posts_per_page' => 3,
       'meta_query' => array(
         array(
             'key'     => 'event_date',
-            'compare' => '>',
+            'compare' => '>=',
             'value'   => $today,
           ),
         )
