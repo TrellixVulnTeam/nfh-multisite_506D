@@ -121,5 +121,5 @@
 
 
    <?php if ( is_singular('events') ) { ?>
-     <B style="font-size: 15px; padding:30px 0px;display:block;">Published on <?php echo get_the_date(); ?></B>
+     <B style="font-size: 15px; padding:3s30px 0px;display:block;">Published on <?php echo get_the_date(); ?></B>
    <?php } ?>
