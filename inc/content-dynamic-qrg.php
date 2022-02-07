@@ -232,7 +232,7 @@
          echo '<h4 class="the_letter" letter="'.$letter.'">'.$letter.'</h4>';
 
          ?><ul class="service_listings" letter="<?php echo $letter; ?>"><?php
-
+          /*
            if($what_to_show=='alphabet'){
              $args = array(
                'post_type'=> 'qrg',
@@ -283,7 +283,8 @@
              );
 
            }
-
+           */
+           
            $result = new WP_Query( $args );
            if ( $result-> have_posts() ) :
              while ( $result->have_posts() ) : $result->the_post();
