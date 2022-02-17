@@ -14,7 +14,6 @@ gulp.task('sass', function () {
     .pipe(gulp.dest('build/css'));
 });
 
-
 var destDir = 'build/css'; //or any folder inside your public asset folder
 var tempDir = 'bin/public/assets/temp/'; //any place where you want to store the concatenated, but unuglified/beautified files
 
@@ -35,10 +34,6 @@ gulp.task('css-uglify', function () {
     // .pipe(gulp.dest('build/css'))
 
 
-
   gulp.watch('**/*.scss', gulp.series('sass'));
-
-
-
 
 exports.default = gulp.series('sass', 'css-uglify'); // 'browserSync'

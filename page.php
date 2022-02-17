@@ -17,7 +17,7 @@
 	$page_top_background = get_field('page_top_background', 'options');
   $page_bottom_background  = get_field('page_bottom_background', 'options');
 
-	$post_type_name = get_post_type( $ths_post_id );
+	$post_type_name = get_post_type( $this_post_id );
 
 	// If is QRG Download ...
 	if ( get_field ('service_type_link', $this_page_id) ) {

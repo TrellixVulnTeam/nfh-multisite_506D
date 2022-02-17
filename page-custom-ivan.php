@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: testing API
+ * Custom template not in use -- was for testing API
  *
  * different template.
  *
