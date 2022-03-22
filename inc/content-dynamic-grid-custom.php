@@ -59,12 +59,12 @@
   // ---------------
   // Check if FILTER !
 
-  if (  ( $main_post_type == 'news' ) && ( ( isset($_POST['categories']) ) || ( isset($_GET['categories']) ) )  )  {
+  if (  ( $main_post_type == 'news' ) && ( ( isset($_GET['categories']) ) || ( isset($_GET['categories']) ) )  )  {
     //echo 'yes cat<BR />';
     //echo $category . '<BR />';
 
-    if ( isset( $_POST['categories'] ) ) {
-      $category = $_POST['categories'];
+    if ( isset( $_GET['categories'] ) ) {
+      $category = $_GET['categories'];
     } elseif ( isset( $_GET['categories'] ) ) {
       $category = $_GET['categories'];
     }
@@ -97,9 +97,9 @@
     </script>
     <?php
 
-  } elseif (  ( $main_post_type == 'bulletins' ) && ( ( isset($_POST['categories']) ) || ( isset($_GET['categories']) ) )  )  {
-      if ( isset( $_POST['categories'] ) ) {
-        $category = $_POST['categories'];
+  } elseif (  ( $main_post_type == 'bulletins' ) && ( ( isset($_GET['categories']) ) || ( isset($_GET['categories']) ) )  )  {
+      if ( isset( $_GET['categories'] ) ) {
+        $category = $_GET['categories'];
       } elseif ( isset( $_GET['categories'] ) ) {
         $category = $_GET['categories'];
       }
@@ -142,12 +142,12 @@
        'paged' => $paged ,
      );
 
-  } elseif (  ( $main_post_type == 'events' ) && ( ( isset($_POST['eventdate']) ) || ( isset($_GET['eventdate']) ) )  )  {
+  } elseif (  ( $main_post_type == 'events' ) && ( ( isset($_GET['eventdate']) ) || ( isset($_GET['eventdate']) ) )  )  {
 
-    // var_dump($_POST);
+    // var_dump($_GET);
 
-      if ( isset( $_POST['eventdate'] ) ) {
-        $category = $_POST['eventdate'];
+      if ( isset( $_GET['eventdate'] ) ) {
+        $category = $_GET['eventdate'];
       } elseif ( isset( $_GET['eventdate'] ) ) {
         $category = $_GET['eventdate'];
       }
@@ -207,12 +207,12 @@
       </script>
       <?php
 
-  } elseif (  ( $main_post_type == 'events' ) && ( ( isset($_POST['locations']) ) || ( isset($_GET['locations']) ) )  )  {
+  } elseif (  ( $main_post_type == 'events' ) && ( ( isset($_GET['locations']) ) || ( isset($_GET['locations']) ) )  )  {
 
-      //  var_dump($_POST);
+      //  var_dump($_GET);
 
-      if ( isset( $_POST['locations'] ) ) {
-        $category = $_POST['locations'];
+      if ( isset( $_GET['locations'] ) ) {
+        $category = $_GET['locations'];
       } elseif ( isset( $_GET['locations'] ) ) {
         $category = $_GET['locations'];
       }
@@ -323,9 +323,9 @@
      'paged' => $paged ,
    );
 
- }  elseif (  ( $main_post_type == 'qrg' ) && ( ( isset($_POST['search']) ) || ( isset($_GET['search']) ) )  ) {
-    if ( isset( $_POST['search'] ) ) {
-     $searchterm = $_POST['search'];
+ }  elseif (  ( $main_post_type == 'qrg' ) && ( ( isset($_GET['search']) ) || ( isset($_GET['search']) ) )  ) {
+    if ( isset( $_GET['search'] ) ) {
+     $searchterm = $_GET['search'];
     } elseif ( isset( $_GET['search'] ) ) {
      $searchterm = $_GET['search'];
     }
@@ -384,7 +384,7 @@ $result = new WP_Query($args);
     <?php	if ( $main_post_type=='news' ) { ?>
       <h2 class="filter-head">Filter by</h2>
       <div class="select_wrapper" style="background: #fff; ">
-         <form method="post" action="<?php the_permalink($this_page_id); ?>">
+         <form method="get" action="<?php the_permalink($this_page_id); ?>">
            <select id="the_services_location" name="categories"  onchange="this.form.submit();">
              <option value="">Category</option>
              <option class="" value="">Show All</option>
@@ -409,7 +409,7 @@ $result = new WP_Query($args);
     <?php } elseif ( $main_post_type=='bulletins' ) { ?>
         <h2 class="filter-head">Filter by</h2>
         <div class="select_wrapper" style="background: #fff; ">
-          <form method="post" action="<?php the_permalink($this_page_id); ?>">
+          <form method="get" action="<?php the_permalink($this_page_id); ?>">
             <select id="the_services_location" name="categories"  onchange="this.form.submit();">
               <option value="">Category</option>
               <option class="" value="">Show All</option>
@@ -436,7 +436,7 @@ $result = new WP_Query($args);
         <div class="col-12 col-sm-8">
           <h2 class="filter-head">Filter by</h2>
           <div class="select_wrapper" style="background: #fff; ">
-            <form method="post" action="<?php the_permalink($this_page_id); ?>">
+            <form method="get" action="<?php the_permalink($this_page_id); ?>">
               <select id="the_services_location" name="categories"  onchange="this.form.submit();">
                 <option value="">Category</option>
                 <option class="" value="">Show All</option>
@@ -463,7 +463,7 @@ $result = new WP_Query($args);
             <div style="padding-right:20px;">
             <h2 class="filter-head">Sort by</h2>
             <div class="select_wrapper" style="background: #fff; width:280px !important;">
-              <form method="post" action="<?php the_permalink($this_page_id); ?>">
+              <form method="get" action="<?php the_permalink($this_page_id); ?>">
                 <input type="text" id="search" name="search" onchange="this.form.submit();">
              </form>
              </div>
@@ -478,7 +478,7 @@ $result = new WP_Query($args);
        <div class="col-12 col-sm-8">
          <h2 class="filter-head">Filter by</h2>
          <div class="select_wrapper" style="background: #fff; ">
-           <form method="post" action="<?php the_permalink($this_page_id); ?>">
+           <form method="get" action="<?php the_permalink($this_page_id); ?>">
              <select id="the_services_location" name="locations" onchange="this.form.submit();">
                <option value="">Location</option>
                <option class="" value="">Show All</option>
@@ -504,7 +504,7 @@ $result = new WP_Query($args);
          <div style="padding-right:20px;">
          <h2 class="filter-head">Sort by</h2>
          <div class="select_wrapper" style="background: #fff; width:280px !important;">
-           <form method="post" action="<?php the_permalink($this_page_id); ?>">
+           <form method="get" action="<?php the_permalink($this_page_id); ?>">
              <select id="the_event_date" name="eventdate" onchange="this.form.submit();">
                <option value="">Date</option>
                <option class="" value="">Show All</option>

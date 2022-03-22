@@ -33,7 +33,7 @@
      <div class="col-12 col-sm-8">
        <h2 class="filter-head">Filter by</h2>
        <div class="select_wrapper" style="background: #fff; ">
-         <form method="post" action="<?php the_permalink($this_page_id); ?>">
+         <form method="get"action="<?php the_permalink($this_page_id); ?>">
            <select id="the_services_location" name="categories"  onchange="this.form.submit();">
              <option value="">Category</option>
              <option class="" value="">Show All</option>
@@ -233,7 +233,7 @@
 
          ?><ul class="service_listings" letter="<?php echo $letter; ?>"><?php
          //Commenting this code helped fixing the Qrg list display Bug
-/*
+
            if($what_to_show=='alphabet'){
              $args = array(
                'post_type'=> 'qrg',
@@ -284,7 +284,7 @@
              );
 
            }
-*/
+
            $result = new WP_Query( $args );
            if ( $result-> have_posts() ) :
              while ( $result->have_posts() ) : $result->the_post();
