@@ -61,7 +61,7 @@ get_header(); ?>
                       if (get_field('excerpt')) {
                         the_field('excerpt');
                       } else {
-                        echo 'No excerpt';
+                        // echo 'No excerpt';
                         //echo strip_tags(get_the_content());
                       }
                       ?>

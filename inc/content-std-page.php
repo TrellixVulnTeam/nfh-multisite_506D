@@ -28,8 +28,14 @@
  <?php if( have_rows('standard_page_content') ): ?>
      <?php while( have_rows('standard_page_content') ): the_row(); ?>
 
-        <?php if ( is_singular('profiles') ) { ?>
-
+        <?php if ( is_singular('profiles') ) {
+          $featured_img_url2 = get_the_post_thumbnail_url(get_the_ID(),'large');
+          ?>
+          <img src="<?php echo $featured_img_url2 ;?>" style="float:left; padding:0px 30px 30px 0px; width: 220px;" align="left"/>
+          <h2 style="padding:10px 0;"><?php the_title(); ?></h2>
+          <h5 class="secondary_accent_colour" style="padding-bottom:10px;">
+            <?php the_field('excerpt'); ?>
+          </h5>
         <?php } ?>
 
         <?php if ( is_singular('events') ) { ?>
@@ -115,5 +121,5 @@
 
 
    <?php if ( is_singular('events') ) { ?>
-     <B style="font-size: 15px;">Published on <?php echo get_the_date(); ?></B>
+     <B style="font-size: 15px; padding:3s30px 0px;display:block;">Published on <?php echo get_the_date(); ?></B>
    <?php } ?>
